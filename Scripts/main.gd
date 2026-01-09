@@ -1,7 +1,7 @@
 extends Node
 
 # References to the blender and QTE panel
-@onready var blender: TextureRect = $BlenderZone
+@onready var blender: TextureRect = $Control/BlenderZone
 @onready var qte_panel: Control = $QTEPanel
 
 func _ready() -> void:

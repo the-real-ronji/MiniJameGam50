@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://diiwudvk716im"]
 
-[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://Scripts/main.gd" id="1_bmxlf"]
-[ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://Scenes/blender_zone.tscn" id="1_vy5pj"]
+[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_bmxlf"]
+[ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://scenes/blender_zone.tscn" id="1_vy5pj"]
 [ext_resource type="Texture2D" uid="uid://cq8x2wpvbg1jl" path="res://Sprites/temp sprites prototype/images.webp" id="2_bmxlf"]
-[ext_resource type="Script" uid="uid://bxhqyi867kxor" path="res://Scripts/banana_ingredient.gd" id="3_vy5pj"]
+[ext_resource type="Script" uid="uid://bxhqyi867kxor" path="res://scripts/banana_ingredient.gd" id="3_vy5pj"]
 [ext_resource type="Texture2D" uid="uid://dj4rktcn3e7dk" path="res://Sprites/temp sprites prototype/images.jpg" id="4_grg3l"]
-[ext_resource type="Script" uid="uid://b5c4jyefuyu5a" path="res://Scripts/milk_ingredient.gd" id="5_frkhe"]
+[ext_resource type="Script" uid="uid://b5c4jyefuyu5a" path="res://scripts/milk_ingredient.gd" id="5_frkhe"]
 [ext_resource type="Texture2D" uid="uid://c6xf0eknlx7d" path="res://Sprites/temp sprites prototype/download (1).jpg" id="6_1p5hy"]
-[ext_resource type="Script" uid="uid://dtmap6ag8kvd0" path="res://Scripts/honey_ingredient.gd" id="7_h1m7h"]
+[ext_resource type="Script" uid="uid://dtmap6ag8kvd0" path="res://scripts/honey_ingredient.gd" id="7_h1m7h"]
 [ext_resource type="Texture2D" uid="uid://cnmrc6yemaajd" path="res://Sprites/temp sprites prototype/images (1).jpg" id="8_erwvk"]
-[ext_resource type="Script" uid="uid://bjkqb8vtaslwq" path="res://Scripts/meat_ingredient.gd" id="9_2w5on"]
-[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://Scenes/qte_panel.tscn" id="11_4kpch"]
+[ext_resource type="Script" uid="uid://bjkqb8vtaslwq" path="res://scripts/meat_ingredient.gd" id="9_2w5on"]
+[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="11_4kpch"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
