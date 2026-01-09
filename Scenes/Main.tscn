@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://diiwudvk716im"]
+
+[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://Scripts/main.gd" id="1_bmxlf"]
+[ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://Scenes/blender_zone.tscn" id="1_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://cq8x2wpvbg1jl" path="res://Sprites/temp sprites prototype/images.webp" id="2_bmxlf"]
+[ext_resource type="Script" uid="uid://bxhqyi867kxor" path="res://Scripts/banana_ingredient.gd" id="3_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://dj4rktcn3e7dk" path="res://Sprites/temp sprites prototype/images.jpg" id="4_grg3l"]
+[ext_resource type="Script" uid="uid://b5c4jyefuyu5a" path="res://Scripts/milk_ingredient.gd" id="5_frkhe"]
+[ext_resource type="Texture2D" uid="uid://c6xf0eknlx7d" path="res://Sprites/temp sprites prototype/download (1).jpg" id="6_1p5hy"]
+[ext_resource type="Script" uid="uid://dtmap6ag8kvd0" path="res://Scripts/honey_ingredient.gd" id="7_h1m7h"]
+[ext_resource type="Texture2D" uid="uid://cnmrc6yemaajd" path="res://Sprites/temp sprites prototype/images (1).jpg" id="8_erwvk"]
+[ext_resource type="Script" uid="uid://bjkqb8vtaslwq" path="res://Scripts/meat_ingredient.gd" id="9_2w5on"]
+[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://Scenes/qte_panel.tscn" id="11_4kpch"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bmxlf")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlenderZone" parent="Control" instance=ExtResource("1_vy5pj")]
+layout_mode = 1
+offset_left = 293.0
+offset_top = 61.0
+offset_right = 518.0
+offset_bottom = 286.0
+focus_mode = 2
+mouse_filter = 0
+
+[node name="Banana_ingredient" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 411.0
+offset_right = 684.0
+offset_bottom = 561.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_bmxlf")
+expand_mode = 1
+script = ExtResource("3_vy5pj")
+
+[node name="Milk_ingredient" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 410.0
+offset_right = 251.0
+offset_bottom = 560.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("4_grg3l")
+expand_mode = 1
+script = ExtResource("5_frkhe")
+
+[node name="honey_ingredient" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 408.0
+offset_right = 467.0
+offset_bottom = 558.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("6_1p5hy")
+expand_mode = 1
+script = ExtResource("7_h1m7h")
+
+[node name="meat_ingredient" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 743.0
+offset_top = 415.0
+offset_right = 893.0
+offset_bottom = 565.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("8_erwvk")
+expand_mode = 1
+script = ExtResource("9_2w5on")
+
+[node name="QTEPanel" parent="." instance=ExtResource("11_4kpch")]
+layout_mode = 1
+offset_left = 669.0
+offset_top = 59.0
+offset_right = -79.0
+offset_bottom = -372.0
