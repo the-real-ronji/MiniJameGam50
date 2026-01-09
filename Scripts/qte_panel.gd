@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if active and event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
-		if timer >= 0.5 and timer <= 1.0:
+		if timer >= 0.0 and timer <= 1.0:
 			feedback.text = "Success!"
 		else:
 			feedback.text = "Failed!"
