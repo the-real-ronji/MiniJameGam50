@@ -1,6 +1,6 @@
 extends TextureRect
 
-var recipe := {"honey": 1, "milk": 1}
+var recipe := {"honey": 1, "milk": 1, "banana": 1}
 var collected := {}
 signal recipe_complete
 
