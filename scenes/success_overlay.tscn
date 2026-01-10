@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6vl3rjc7xh3w"]
+
+[ext_resource type="Script" uid="uid://d1llgsu48ch8d" path="res://scripts/success_overlay.gd" id="1_df6wt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qr75k"]
+font_size = 48
+
+[node name="Success" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_df6wt")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Next Drink"
+
+[node name="Yay" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -363.0
+offset_top = 169.0
+offset_right = 435.0
+offset_bottom = 236.0
+grow_horizontal = 2
+text = "DRINK PREPARED SUCCESSFULLY!!!"
+label_settings = SubResource("LabelSettings_qr75k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

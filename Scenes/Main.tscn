@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://diiwudvk716im"]
+[gd_scene load_steps=15 format=3 uid="uid://diiwudvk716im"]
 
 [ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_bmxlf"]
 [ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://scenes/blender_zone.tscn" id="1_vy5pj"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://gwy6o0at33rv" path="res://scripts/apple_ingredient.gd" id="11_frkhe"]
 [ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="12_grg3l"]
 [ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://scripts/game_over.gd" id="13_frkhe"]
+[ext_resource type="PackedScene" uid="uid://b6vl3rjc7xh3w" path="res://scenes/success_overlay.tscn" id="14_mwfav"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -137,5 +138,7 @@ offset_top = 372.0
 offset_right = 669.0
 offset_bottom = 425.0
 text = "Play Again"
+
+[node name="Success" parent="." instance=ExtResource("14_mwfav")]
 
 [connection signal="pressed" from="GameOver/retry" to="GameOver" method="_on_retry_pressed"]

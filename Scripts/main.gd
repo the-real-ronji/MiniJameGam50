@@ -2,6 +2,7 @@ extends Node
 
 @onready var blender: TextureRect = $Control/BlenderZone
 @onready var qte_panel: QTEPanel = $QTEPanel
+@onready var success: CanvasLayer = $Success
 
 var phases : Array[PackedScene]= [
 	preload("res://scenes/prep_phase.tscn"),
@@ -42,6 +43,7 @@ func _on_qte_finished(success: bool, data: Dictionary) -> void:
 	if success:
 		print("Drink prepared successfully!")
 		print("Run data: ", data)
+		success.vis
 	else:
 		print("Drink failed!")
 		print("Failure data: ", data)
