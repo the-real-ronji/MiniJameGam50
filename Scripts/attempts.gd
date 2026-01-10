@@ -2,9 +2,9 @@ extends Label
 
 
 func _process(_delta: float) -> void:
-	if GameManager.attempt >0:
-		self.text = "Attempt: " + str(GameManager.attempt)
-		$"../Control/UIs/GameOver".hide()
-	if GameManager.attempt ==5:
+	self.text = "Attempt: " + str(GameManager.attempt)
+
+	if GameManager.attempt ==10:
 		$"../Control/UIs/GameOver".show()
 		GameManager.attempt = 0
+		print(8)

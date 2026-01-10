@@ -5,4 +5,5 @@ func _ready() -> void:
 	self.hide()
 
 func _on_retry_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Main.tscn")
+	GameManager.attempt = 0
+	get_tree().reload_current_scene()

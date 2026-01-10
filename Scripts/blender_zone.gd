@@ -25,9 +25,7 @@ func accept_ingredient(ingredientName: String) -> bool:
 		showfeedback()
 		GameManager.attempt += 1
 		if GameManager.attempt == 5:
-			GameManager.attempt = 0
 			$"../UIs/GameOver".show()
-			get_tree().paused = true
 		match name:
 			"sugarcubes":
 				$VisualFeedback.text = "Too bitter for a kid’s drink!"

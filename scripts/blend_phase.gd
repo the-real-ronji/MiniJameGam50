@@ -94,6 +94,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if timer <= input_time_window:
 				print("Input %s correct!" % expected)
 				current_index += 1
+				timer = 0.0   # 🔑 Reset countdown here
 				if current_index >= sequence.size():
 					_success()
 			else:
@@ -162,4 +163,3 @@ func _input(event: InputEvent) -> void:
 			else:
 				$"blendphase tutorial".hide()
 				timer = 0.0
- 
