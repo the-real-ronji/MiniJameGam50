@@ -19,7 +19,7 @@ var current_index: int = 0
 var timer: float = 0.0
 var success: bool = true
 
-func start(sharedData: Dictionary = {}) -> void:
+func start(_sharedData: Dictionary = {}) -> void:
 	current_index = 0
 	timer = 0.0
 	success = true

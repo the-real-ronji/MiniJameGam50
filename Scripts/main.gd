@@ -5,8 +5,8 @@ extends Node
 
 var phases : Array[PackedScene]= [
 	preload("res://scenes/prep_phase.tscn"),
-	preload("res://scenes/blend_phase.tscn")
-	
+	preload("res://scenes/blend_phase.tscn"),
+	preload("res://scenes/pour_phase.tscn")
 ]
 
 

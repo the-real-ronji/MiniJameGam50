@@ -18,7 +18,7 @@ func _ready() -> void:
 	set_process(false)
 	set_process_unhandled_input(false)
 
-func start(sharedData := {}) -> void:
+func start(_sharedData := {}) -> void:
 	pressed = false
 	elapsed = 0.0
 	ice_bar.value = 0.0
