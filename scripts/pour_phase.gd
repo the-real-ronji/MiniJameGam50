@@ -4,7 +4,7 @@ signal finished(success: bool, data: Dictionary)
 
 @export var hold_key: String = "ui_accept"   # Key to hold
 @export var fill_speed: float = 0.2          # Fill per second (0-1 scale)
-@export var pourWindow: float = 0.1
+@export var pourWindow: float = 0.2
 
 @onready var fill_bar: TextureProgressBar = $FillBar
 @onready var label: Label = $Label

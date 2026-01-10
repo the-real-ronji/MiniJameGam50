@@ -3,6 +3,9 @@ class_name QTEPanel
 
 signal finished(success: bool, data: Dictionary)
 
+enum Stage {Childhood, Adolescence, YoungAdult, MiddleAge, Senior}
+@export var lifeStage : Stage = Stage.Childhood
+
 @onready var phaseContainer: Control = $Phases
 
 var phases: Array[PackedScene] = []
