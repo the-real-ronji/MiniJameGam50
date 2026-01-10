@@ -5,7 +5,10 @@ var collected: Dictionary = {}
 
 signal recipe_complete
 
-
+func showfeedback() -> void:
+	$VisualFeedback.visible = true
+	await get_tree().create_timer(2.0).timeout
+	$VisualFeedback.visible = false
 
 func set_recipe(new_recipe: Dictionary) -> void:
 	recipe = new_recipe
@@ -19,11 +22,12 @@ func accept_ingredient(name: String) -> bool:
 		_check_recipe()
 		return true
 	else:
+		showfeedback()
 		GameManager.attempt += 1
-		$"../../attempts".text = "Attempt: " + str(GameManager.attempt)
 		if GameManager.attempt == 5:
 			GameManager.attempt = 0
 			$"../UIs/GameOver".show()
+			get_tree().paused = true
 		match name:
 			"sugarcubes":
 				$VisualFeedback.text = "Too bitter for a kid’s drink!"
@@ -37,6 +41,6 @@ func _check_recipe() -> void:
 	for k in recipe.keys():
 		if collected.get(k, 0) < recipe[k]:
 			return
-	$VisualFeedback.text = "All ingredients collected! Recipe complete."
+	print("All ingredients collected! Recipe complete.")
 	collected.clear()
 	emit_signal("recipe_complete")

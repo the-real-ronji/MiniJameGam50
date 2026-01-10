@@ -8,16 +8,13 @@ signal finished(success: bool, data: Dictionary)
 @onready var white: ColorRect = $White
 @onready var tutorial := $"prepphase tutorial"
 
-# --- State ---
 var pressed: bool = false
 var elapsed: float = 0.0
 var can_fill: bool = false
 var timing_started := false
 
-# --- Timing config ---
-@export var total_time: float = 1.0      # full bar duration (seconds)
+@export var total_time: float = 1.0 
 
-# success window as FRACTIONS of total_time (0–1)
 @export_range(0.0, 1.0) var min_fraction := 0.5
 @export_range(0.0, 1.0) var max_fraction := 1.0
 
@@ -43,8 +40,7 @@ func start(_sharedData := {}) -> void:
 	can_fill = false
 	ice_bar.value = 0.0
 
-	# --- RANDOMIZE WINDOW EACH START ---
-	var window_size := randf_range(0.15, 0.30)   # 15%–30% bar size
+	var window_size := randf_range(0.15, 0.30)
 	min_fraction = randf_range(0.0, 1.0 - window_size)
 	max_fraction = min_fraction + window_size
 
