@@ -14,3 +14,7 @@ config/name="MiniJameGam#50"
 run/main_scene="uid://diiwudvk716im"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
+
+[autoload]
+
+GameManager="*res://game_manager.gd"

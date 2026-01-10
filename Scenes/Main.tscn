@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://diiwudvk716im"]
+[gd_scene load_steps=13 format=3 uid="uid://diiwudvk716im"]
 
 [ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://Scripts/main.gd" id="1_bmxlf"]
 [ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://Scenes/blender_zone.tscn" id="1_vy5pj"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cnmrc6yemaajd" path="res://Sprites/temp sprites prototype/images (1).jpg" id="8_erwvk"]
 [ext_resource type="Script" uid="uid://bjkqb8vtaslwq" path="res://Scripts/meat_ingredient.gd" id="9_2w5on"]
 [ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://Scenes/qte_panel.tscn" id="11_4kpch"]
+[ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://game_manager.gd" id="12_grg3l"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -89,3 +90,6 @@ offset_left = 669.0
 offset_top = 59.0
 offset_right = -79.0
 offset_bottom = -372.0
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("12_grg3l")
