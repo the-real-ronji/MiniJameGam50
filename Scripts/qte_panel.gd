@@ -37,7 +37,9 @@ func _start_next_phase() -> void:
 	currentPhase.finished.connect(_on_phase_finished)
 	
 	if currentPhase.has_method("start"):
-		currentPhase.start(accData)
+		var startData = accData.duplicate()
+		startData["lifeStage"] = lifeStage
+		currentPhase.start(startData)
 	
 	phaseIndex+=1
 
