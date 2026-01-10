@@ -69,14 +69,14 @@ func _update_image() -> void:
 
 func _success() -> void:
 	success = true
-	print("Blend phase completed perfectly!")
+	print("\nBlend phase completed perfectly!")
 	_end_phase(true, {"blend_success": true, "inputs_hit": current_index})
 
 func _fail(reason: String) -> void:
 	if not success:
 		return
 	success = false
-	print("Blend phase failed: ", reason)
+	print("\nBlend phase failed: ", reason)
 	_end_phase(false, {"blend_success": false, "failed_at": current_index, "reason": reason})
 
 func _end_phase(successful: bool, data: Dictionary) -> void:

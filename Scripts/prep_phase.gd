@@ -82,7 +82,7 @@ func _update_green_zone() -> void:
 
 
 func _success() -> void:
-	print("✅ Perfect ice prep! Timing:", elapsed)
+	print("\nPerfect ice prep! Timing:", elapsed)
 	_end_phase(true, {
 		"prep_quality": remap(elapsed, min_time, max_time, 1.0, 0.7),
 		"timing": elapsed
@@ -90,7 +90,7 @@ func _success() -> void:
 
 
 func _fail(reason: String) -> void:
-	print("❌ Prep failed:", reason, "(stopped at ", elapsed, ")")
+	print("\nPrep failed:", reason, "(stopped at ", elapsed, ")")
 	_end_phase(false, {
 		"reason": reason,
 		"timing": elapsed
