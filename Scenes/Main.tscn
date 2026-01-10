@@ -92,10 +92,10 @@ script = ExtResource("11_frkhe")
 
 [node name="QTEPanel" parent="." instance=ExtResource("11_4kpch")]
 layout_mode = 1
-offset_left = 633.0
-offset_top = 70.0
-offset_right = -115.0
-offset_bottom = -361.0
+offset_left = 197.0
+offset_top = 64.0
+offset_right = -551.0
+offset_bottom = -367.0
 
 [node name="Phases" type="Control" parent="QTEPanel"]
 anchors_preset = 0
@@ -110,11 +110,13 @@ layout_mode = 0
 offset_right = 1.0
 offset_bottom = 23.0
 
-[node name="GameOver" type="CanvasLayer" parent="."]
+[node name="UIs" type="Node" parent="."]
+
+[node name="GameOver" type="CanvasLayer" parent="UIs"]
 visible = false
 script = ExtResource("13_frkhe")
 
-[node name="Panel" type="Panel" parent="GameOver"]
+[node name="Panel" type="Panel" parent="UIs/GameOver"]
 anchors_preset = -1
 anchor_right = 0.017
 anchor_bottom = 0.031000001
@@ -123,7 +125,7 @@ offset_top = -42.0
 offset_right = 1196.416
 offset_bottom = 665.912
 
-[node name="Label" type="Label" parent="GameOver"]
+[node name="Label" type="Label" parent="UIs/GameOver"]
 offset_right = 1125.0
 offset_bottom = 401.0
 theme_override_font_sizes/font_size = 50
@@ -131,11 +133,11 @@ text = "You Failed"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="retry" type="Button" parent="GameOver"]
+[node name="retry" type="Button" parent="UIs/GameOver"]
 offset_left = 439.0
 offset_top = 372.0
 offset_right = 669.0
 offset_bottom = 425.0
 text = "Play Again"
 
-[connection signal="pressed" from="GameOver/retry" to="GameOver" method="_on_retry_pressed"]
+[connection signal="pressed" from="UIs/GameOver/retry" to="UIs/GameOver" method="_on_retry_pressed"]
