@@ -15,11 +15,11 @@ var can_fill: bool = false
 var timing_started := false
 
 # --- Timing config ---
-@export var total_time: float = 3.0      # full bar duration (seconds)
+@export var total_time: float = 1.0      # full bar duration (seconds)
 
 # success window as FRACTIONS of total_time (0–1)
-@export_range(0.0, 1.0) var min_fraction := 0.4
-@export_range(0.0, 1.0) var max_fraction := 0.65
+@export_range(0.0, 1.0) var min_fraction := 0.5
+@export_range(0.0, 1.0) var max_fraction := 1.0
 
 
 func _ready() -> void:
