@@ -3,21 +3,29 @@ extends Control
 signal finished(success: bool, data: Dictionary)
 
 @export var hold_key: String = "ui_accept"   # Key to hold
-@export var min_fill: float = 0.7           # Minimum success percentage
-@export var max_fill: float = 0.8           # Maximum success percentage
-@export var fill_speed: float = 0.2         # Fill per second (0-1 scale)
+@export var fill_speed: float = 0.2          # Fill per second (0-1 scale)
 @onready var fill_bar: TextureProgressBar = $FillBar
 @onready var label: Label = $Label
 
 var holding := false
 var fill_amount := 0.0
 var success := true
+var min_fill: float = 0.7
+var max_fill: float = 0.8
 
 func start(_sharedData: Dictionary = {}) -> void:
 	holding = false
 	fill_amount = 0.0
 	success = true
 	fill_bar.value = 0.0
+	
+	# Pick a random range (10% wide, min >= 0.5)
+	var min_percent = randf_range(0.5, 0.9)   # 50% to 90%
+	min_fill = min_percent
+	max_fill = min_fill + 0.1                 # Always 10% window
+	if max_fill > 1.0:
+		max_fill = 1.0
+	
 	set_process(true)
 	set_process_unhandled_input(true)
 	print("Pour phase started! Hold '%s' and release between %.0f%% and %.0f%%." 
@@ -33,7 +41,7 @@ func _process(delta: float) -> void:
 	if fill_amount > 1.0:
 		_fail("Overfilled!")
 	
-	label.text = "%.1f%%" % (fill_amount*100.0) 	
+	label.text = "%.1f%%" % (fill_amount*100.0)     
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not success:
