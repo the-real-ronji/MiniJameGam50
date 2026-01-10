@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ukvjrq38e4cj"]
+[gd_scene load_steps=6 format=3 uid="uid://ukvjrq38e4cj"]
 
-[ext_resource type="Script" uid="uid://d0ubr77mhi0h3" path="res://scripts/blend_phase.gd" id="1_io2sw"]
+[ext_resource type="Script" uid="uid://d0ubr77mhi0h3" path="res://Scripts/blend_phase.gd" id="1_io2sw"]
 [ext_resource type="Texture2D" uid="uid://cwkjb22dlhl2u" path="res://Sprites/temp sprites prototype/w.jpg" id="2_ietne"]
+[ext_resource type="Texture2D" uid="uid://b35phlpbs1ve3" path="res://Sprites/temp sprites prototype/d.png" id="3_73nky"]
+[ext_resource type="Texture2D" uid="uid://bxa0atig8oj53" path="res://Sprites/temp sprites prototype/s.jpg" id="4_dptw4"]
+[ext_resource type="Texture2D" uid="uid://t3ch8buot81s" path="res://Sprites/temp sprites prototype/a.jpg" id="5_io0ff"]
 
 [node name="BlendPhase" type="Control"]
 layout_mode = 3
@@ -16,3 +19,72 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.8062846, 0.78215426)
 texture = ExtResource("2_ietne")
+
+[node name="blendphase tutorial" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="blendphase tutorial"]
+offset_right = 1215.0
+offset_bottom = 730.0
+
+[node name="Label" type="Label" parent="blendphase tutorial"]
+offset_left = 143.0
+offset_top = 500.0
+offset_right = 1010.0
+offset_bottom = 569.0
+theme_override_font_sizes/font_size = 50
+text = "Press \"SPACE\" when blue is at green"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="blendphase tutorial"]
+offset_left = 632.0
+offset_top = 576.0
+offset_right = 1499.0
+offset_bottom = 645.0
+theme_override_font_sizes/font_size = 50
+text = "ENTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="blendphase tutorial"]
+offset_left = 52.0
+offset_top = 249.0
+offset_right = 1118.0
+offset_bottom = 318.0
+theme_override_font_sizes/font_size = 50
+text = "CLICK THE KEYS THAT IS SHOWN ON SCREEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="blendphase tutorial"]
+offset_left = 277.0
+offset_top = 334.0
+offset_right = 502.0
+offset_bottom = 559.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ietne")
+
+[node name="TextureRect2" type="TextureRect" parent="blendphase tutorial"]
+offset_left = 471.0
+offset_top = 338.0
+offset_right = 722.0
+offset_bottom = 539.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_73nky")
+
+[node name="TextureRect3" type="TextureRect" parent="blendphase tutorial"]
+offset_left = 659.0
+offset_top = 334.0
+offset_right = 884.0
+offset_bottom = 559.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_dptw4")
+
+[node name="TextureRect4" type="TextureRect" parent="blendphase tutorial"]
+offset_left = 860.0
+offset_top = 336.0
+offset_right = 1085.0
+offset_bottom = 561.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_io0ff")
