@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://qc4v5ec8mgv8"]
+[gd_scene load_steps=5 format=3 uid="uid://qc4v5ec8mgv8"]
 
-[ext_resource type="Script" uid="uid://ggdqejwff1xp" path="res://scripts/prep_phase.gd" id="1_nmes1"]
+[ext_resource type="Script" uid="uid://ggdqejwff1xp" path="res://Scripts/prep_phase.gd" id="1_nmes1"]
 [ext_resource type="Texture2D" uid="uid://64iruedsbxb0" path="res://Sprites/temp sprites prototype/progress.png" id="2_mqbqw"]
 [ext_resource type="Texture2D" uid="uid://dy617vwhfcu3l" path="res://Sprites/temp sprites prototype/blue progress.png" id="3_mqbqw"]
+[ext_resource type="Texture2D" uid="uid://dhpoat0rf4843" path="res://Sprites/temp sprites prototype/space icon.png" id="4_uy7x5"]
 
 [node name="PrepPhase" type="Control"]
 layout_mode = 3
@@ -39,3 +40,20 @@ scale = Vector2(0.99875283, 0.99118894)
 step = 0.01
 texture_under = ExtResource("2_mqbqw")
 texture_progress = ExtResource("3_mqbqw")
+
+[node name="indicator" type="Label" parent="IceBar"]
+layout_mode = 0
+offset_left = 202.25224
+offset_top = -35.311127
+offset_right = 345.25226
+offset_bottom = -12.311127
+text = "Click \"SPACE\" here"
+
+[node name="TextureRect" type="TextureRect" parent="IceBar/indicator"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = -9.0
+offset_right = 191.0
+offset_bottom = 26.0
+texture = ExtResource("4_uy7x5")
+expand_mode = 1
