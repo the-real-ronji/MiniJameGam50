@@ -2,7 +2,7 @@ extends Control
 
 signal finished(success: bool, data: Dictionary)
 
-@onready var ice_bar: ProgressBar = $IceBar
+@onready var ice_bar: TextureProgressBar = $IceBar
 
 var pressed := false
 var elapsed := 0.0
