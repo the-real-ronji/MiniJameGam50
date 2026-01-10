@@ -3,6 +3,9 @@ class_name QTEPanel
 
 signal finished(success: bool, data: Dictionary)
 
+enum Stage {Childhood, Adolescence, YoungAdult, MiddleAge, Senior}
+@export var lifeStage : Stage = Stage.Childhood
+
 @onready var phaseContainer: Control = $Phases
 
 var phases: Array[PackedScene] = []
@@ -34,7 +37,9 @@ func _start_next_phase() -> void:
 	currentPhase.finished.connect(_on_phase_finished)
 	
 	if currentPhase.has_method("start"):
-		currentPhase.start(accData)
+		var startData = accData.duplicate()
+		startData["lifeStage"] = lifeStage
+		currentPhase.start(startData)
 	
 	phaseIndex+=1
 
