@@ -1,7 +1,13 @@
 extends Node
 
 @onready var blender: TextureRect = $Control/BlenderZone
-@onready var qte_panel: Control = $QTEPanel
+@onready var qte_panel: QTEPanel = $QTEPanel
+
+var phases : Array[PackedScene]= [
+	preload("res://scenes/prep_phase.tscn")
+	
+	
+]
 
 
 func _ready() -> void:
@@ -15,10 +21,28 @@ func _ready() -> void:
 
 	if qte_panel:
 		qte_panel.hide()
+		qte_panel.finished.connect(_on_qte_finished)
+	else:
+		push_error("QTE not found in scene tree")
 
 func _on_recipe_complete() -> void:
 	print("Recipe complete! Starting QTE...")
-	if qte_panel and qte_panel.has_method("start_qte"):
-		qte_panel.start_qte()
+	
+	var qte_context := {
+		"stage": "childhood",
+		"difficulty": 1,
+		"base_score": 100
+	}
+
+	qte_panel.show()
+	qte_panel.start_qte(phases, qte_context)
+
+func _on_qte_finished(success: bool, data: Dictionary) -> void:
+	qte_panel.hide()
+	
+	if success:
+		print("Drink prepared successfully!")
+		print("Run data: ", data)
 	else:
-		push_error("QTEPanel missing or has no start_qte()")
+		print("Drink failed!")
+		print("Failure data: ", data)

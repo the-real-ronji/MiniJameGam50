@@ -91,5 +91,9 @@ offset_top = 59.0
 offset_right = -79.0
 offset_bottom = -372.0
 
+[node name="Phases" type="Control" parent="QTEPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("12_grg3l")
