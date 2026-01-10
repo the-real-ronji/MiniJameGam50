@@ -43,6 +43,11 @@ func start(_sharedData := {}) -> void:
 	can_fill = false
 	ice_bar.value = 0.0
 
+	# --- RANDOMIZE WINDOW EACH START ---
+	var window_size := randf_range(0.15, 0.30)   # 15%–30% bar size
+	min_fraction = randf_range(0.0, 1.0 - window_size)
+	max_fraction = min_fraction + window_size
+
 	_update_green_zone()
 
 	set_process(true)
@@ -120,7 +125,7 @@ func _update_green_zone() -> void:
 
 
 func _success() -> void:
-	print("✅ Perfect ice prep! Timing:", elapsed)
+	print("Perfect ice prep! Timing:", elapsed)
 
 	_end_phase(true, {
 		"prep_quality": remap(
@@ -135,7 +140,7 @@ func _success() -> void:
 
 
 func _fail(reason: String) -> void:
-	print("❌ Prep failed:", reason, "(stopped at", elapsed, ")")
+	print("Prep failed:", reason, "(stopped at", elapsed, ")")
 
 	_end_phase(false, {
 		"reason": reason,
