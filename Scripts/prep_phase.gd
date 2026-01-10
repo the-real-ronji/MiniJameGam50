@@ -55,7 +55,7 @@ func _process(delta: float) -> void:
 		_fail("Too late!")
 		return
 	
-	ice_bar.value = elapsed / total_time
+	ice_bar.value = elapsed / fill_duration
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -79,8 +79,8 @@ func _update_green_zone() -> void:
 	
 	var bar_width := white.size.x  # 400px
 	
-	var start_ratio := min_time / total_time
-	var size_ratio := (max_time - min_time) / total_time
+	var start_ratio := min_fraction / fill_duration
+	var size_ratio := (max_fraction - min_fraction) / fill_duration
 	
 	green.position.x = white.position.x + start_ratio * bar_width
 	green.size.x = size_ratio * bar_width
