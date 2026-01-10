@@ -92,10 +92,10 @@ script = ExtResource("11_frkhe")
 
 [node name="QTEPanel" parent="." instance=ExtResource("11_4kpch")]
 layout_mode = 1
-offset_left = 669.0
-offset_top = 59.0
-offset_right = -79.0
-offset_bottom = -372.0
+offset_left = 633.0
+offset_top = 70.0
+offset_right = -115.0
+offset_bottom = -361.0
 
 [node name="Phases" type="Control" parent="QTEPanel"]
 anchors_preset = 0
@@ -111,6 +111,7 @@ offset_right = 1.0
 offset_bottom = 23.0
 
 [node name="GameOver" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("13_frkhe")
 
 [node name="Panel" type="Panel" parent="GameOver"]

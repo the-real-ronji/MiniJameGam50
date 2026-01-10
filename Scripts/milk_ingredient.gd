@@ -3,11 +3,15 @@ extends TextureRect
 var dragging := false
 var ingredient_name := "milk"
 var original_position : Vector2
+var locked := false
 
 func _ready():
 	original_position = position
 
 func _gui_input(event):
+	if locked:
+		return
+
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			dragging = true
@@ -28,6 +32,7 @@ func _check_drop_zone():
 		var accepted = blender.accept_ingredient(ingredient_name)
 		if accepted:
 			position = blender.position + Vector2(20, 20)
+			locked = true
 		else:
 			position = original_position
 	else:
