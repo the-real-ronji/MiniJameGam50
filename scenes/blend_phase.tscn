@@ -10,8 +10,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_io2sw")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="image" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(0.8062846, 0.78215426)
 texture = ExtResource("2_ietne")
