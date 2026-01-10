@@ -9,16 +9,12 @@ var collected: Dictionary = {}
 signal recipe_complete
 
 # --- Public API ---
-
-# Assign a new recipe dictionary at runtime
 func set_recipe(new_recipe: Dictionary) -> void:
 	recipe = new_recipe
 	collected.clear()
 	print("Blender set with recipe: %s" % recipe)
 
-# Called when an ingredient is dropped into the blender
 func accept_ingredient(name: String) -> bool:
-	# Check if ingredient is part of the recipe
 	if recipe.has(name):
 		collected[name] = (collected.get(name, 0) + 1)
 		print("Ingredient correct: %s" % name)
@@ -29,9 +25,7 @@ func accept_ingredient(name: String) -> bool:
 		return false
 
 # --- Internal Helpers ---
-
 func _check_recipe() -> void:
-	# Verify all required ingredients are collected
 	for k in recipe.keys():
 		if collected.get(k, 0) < recipe[k]:
 			return  # Still missing something
