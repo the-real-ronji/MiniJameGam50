@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qc4v5ec8mgv8"]
 
-[ext_resource type="Script" uid="uid://ggdqejwff1xp" path="res://Scripts/prep_phase.gd" id="1_nmes1"]
+[ext_resource type="Script" uid="uid://ggdqejwff1xp" path="res://scripts/prep_phase.gd" id="1_nmes1"]
 
 [node name="PrepPhase" type="Control"]
 layout_mode = 3
