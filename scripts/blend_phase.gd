@@ -87,7 +87,7 @@ func _update_image() -> void:
 
 func _success() -> void:
 	success = true
-	print("Blend phase completed perfectly!")
+	print("\nBlend phase completed perfectly!")
 	_end_phase(true, {"blend_success": true, "inputs_hit": current_index})
 
 func _fail(reason: String) -> void:
