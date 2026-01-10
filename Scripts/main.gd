@@ -3,6 +3,7 @@ extends Node
 @onready var blender: TextureRect = $Control/BlenderZone
 @onready var qte_panel: Control = $QTEPanel
 
+
 func _ready() -> void:
 	if blender:
 		blender.connect("recipe_complete", Callable(self, "_on_recipe_complete"))

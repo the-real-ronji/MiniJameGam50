@@ -1,8 +1,8 @@
 extends Node
 
 # --- Ingredient pools (lowercase) ---
-var childhood_correct = ["apple", "banana", "honey", "milk", "strawberry", "cookies"]
-var childhood_decoys = ["soda", "coffee", "spicy chips", "raw meat", "energy drink", "garlic", "vinegar", "alcohol"]
+var childhood_correct = ["fruit", "milk"]
+var childhood_decoys = ["sugar cubes", "ice"]
 
 var adolescence_correct = ["chocolate", "protein_bar", "energy_drink", "peanut_butter", "soda"]
 var adolescence_decoys = ["herbal_tea", "warm_milk", "yogurt", "turmeric", "kale", "wine", "candy_sprinkles", "ginger"]
@@ -25,12 +25,8 @@ func get_childhood_recipes() -> Array:
 # --- Fixed recipe dictionaries (for Blender validation) ---
 func get_childhood_recipe() -> Dictionary:
 	return {
-		"honey": 1,
-		"milk": 1,
-		"banana": 1,
 		"apple": 1,
-		"strawberry": 1,
-		"cookies": 1
+		"milk": 1,
 	}
 
 func get_adolescence_recipe() -> Dictionary:
