@@ -1,11 +1,11 @@
 extends TextureRect
 
 var dragging := false
-var ingredient_name := "strawberry"
+var ingredient_name := "apple"
 var original_position : Vector2
 
 func _ready():
-	original_position = position  # remember starting spot
+	original_position = position
 
 func _gui_input(event):
 	if event is InputEventMouseButton:
@@ -27,11 +27,8 @@ func _check_drop_zone():
 	if ingredient_rect.intersects(blender_rect):
 		var accepted = blender.accept_ingredient(ingredient_name)
 		if accepted:
-			# ✅ Correct ingredient stays inside blender
-			position = blender.position + Vector2(20, 20)  # offset so it sits inside
+			position = blender.position + Vector2(20, 20)
 		else:
-			# ❌ Wrong ingredient goes back to shelf
 			position = original_position
 	else:
-		# ↩️ Not dropped in blender → return to shelf
 		position = original_position

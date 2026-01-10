@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://1s5doyshdaga"]
 
-[ext_resource type="Script" uid="uid://c058lw2eji3cw" path="res://blender_zone.gd" id="1_4u1wg"]
+[ext_resource type="Script" uid="uid://c058lw2eji3cw" path="res://Scripts/blender_zone.gd" id="1_4u1wg"]
 [ext_resource type="Texture2D" uid="uid://cmqgt7qgil1yf" path="res://Sprites/temp sprites prototype/download.jpg" id="2_003xe"]
 
 [node name="BlenderZone" type="TextureRect"]

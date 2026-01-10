@@ -10,8 +10,8 @@
 [ext_resource type="Script" uid="uid://d1ksfurx1ruci" path="res://scripts/ice_ingredient.gd" id="8_fq0cl"]
 [ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="11_4kpch"]
 [ext_resource type="Texture2D" uid="uid://bgj25b6rwvdjp" path="res://Sprites/temp sprites prototype/apple.jpg" id="11_346fj"]
-[ext_resource type="Script" uid="uid://gwy6o0at33rv" path="res://scenes/apple_ingredient.gd" id="11_frkhe"]
-[ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://game_manager.gd" id="12_grg3l"]
+[ext_resource type="Script" uid="uid://gwy6o0at33rv" path="res://Scripts/apple_ingredient.gd" id="11_frkhe"]
+[ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://Scripts/game_manager.gd" id="12_grg3l"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -35,6 +35,13 @@ offset_right = 518.0
 offset_bottom = 286.0
 focus_mode = 2
 mouse_filter = 0
+
+[node name="VisualFeedback" type="Label" parent="Control/BlenderZone"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 263.0
+offset_right = 212.0
+offset_bottom = 286.0
 
 [node name="sugarcubes_ingredient" type="TextureRect" parent="Control"]
 layout_mode = 0

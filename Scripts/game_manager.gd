@@ -1,13 +1,9 @@
 extends Node
 
-# --- Ingredient pools (lowercase) ---
+var stage: String = "childhood"
 var childhood_correct = ["fruit", "milk"]
 var childhood_decoys = ["sugar cubes", "ice"]
 
-var adolescence_correct = ["chocolate", "protein_bar", "energy_drink", "peanut_butter", "soda"]
-var adolescence_decoys = ["herbal_tea", "warm_milk", "yogurt", "turmeric", "kale", "wine", "candy_sprinkles", "ginger"]
-
-# --- Random pool generator (for spawning items) ---
 func get_childhood_recipes() -> Array:
 	var num_correct = randi_range(3, 6)
 	var selected_correct = childhood_correct.duplicate()
@@ -22,7 +18,6 @@ func get_childhood_recipes() -> Array:
 	recipe_pool.shuffle()
 	return recipe_pool
 
-# --- Fixed recipe dictionaries (for Blender validation) ---
 func get_childhood_recipe() -> Dictionary:
 	return {
 		"apple": 1,
