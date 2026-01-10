@@ -48,14 +48,14 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _success() -> void:
 	success = true
-	print("✅ Pour phase success! Filled %.0f%%" % (fill_amount*100))
+	print("Pour phase success! Filled %.0f%%" % (fill_amount*100))
 	_end_phase(true, {"pour_success": true, "fill": fill_amount})
 
 func _fail(reason: String) -> void:
 	if not success:
 		return
 	success = false
-	print("❌ Pour phase failed: ", reason)
+	print("Pour phase failed: ", reason)
 	_end_phase(false, {"pour_success": false, "fill": fill_amount, "reason": reason})
 
 func _end_phase(successful: bool, data: Dictionary) -> void:
