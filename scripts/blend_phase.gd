@@ -4,6 +4,7 @@ signal finished(success: bool, data: Dictionary)
 
 @export var sequence: Array[String] = []  # will be set at start
 @export var input_time_window: float = 3.0
+@export var sequenceSize := 4
 
 # Preload your number sprites here
 @export var numberTextures: Dictionary[String, Texture] = {
@@ -46,7 +47,7 @@ func _ready() -> void:
 func start(_sharedData: Dictionary = {}) -> void:
 	var pool: Array[String] = ["1","2","3","4","5","6","7","8","9","0"]
 	sequence = []
-	while sequence.size() < 4:
+	while sequence.size() < sequenceSize:
 		var choice = pool[randi() % pool.size()]
 		if not sequence.has(choice):
 			sequence.append(choice)

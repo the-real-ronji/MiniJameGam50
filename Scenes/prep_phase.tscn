@@ -15,6 +15,10 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 focus_mode = 2
 script = ExtResource("1_nmes1")
+greenZoneLowerBound = null
+greenZoneUpperBound = null
+greenZoneStart = null
+greenZoneEnd = null
 metadata/_edit_use_anchors_ = true
 
 [node name="White" type="ColorRect" parent="."]
@@ -24,8 +28,8 @@ offset_bottom = 40.0
 
 [node name="Green" type="ColorRect" parent="."]
 layout_mode = 1
-offset_left = 202.0
-offset_right = 293.0
+offset_left = 200.0
+offset_right = 400.0
 offset_bottom = 40.0
 color = Color(0, 0.64646673, 0.14417031, 1)
 
@@ -34,6 +38,7 @@ layout_mode = 1
 offset_right = 400.0054
 offset_bottom = 40.0
 scale = Vector2(0.9999865, 1.0010124)
+max_value = 1.0
 step = 0.01
 texture_progress = ExtResource("3_mqbqw")
 

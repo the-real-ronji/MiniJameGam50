@@ -1,4 +1,3 @@
-@tool
 extends Control
 
 signal finished(success: bool, data: Dictionary)
@@ -13,7 +12,11 @@ var elapsed: float = 0.0
 var can_fill: bool = false
 var timing_started := false
 
-@export var total_time: float = 1.0 
+@export var total_time: float = 1.0
+@export var greenZoneLowerBound: float = 0.4
+@export var greenZoneUpperBound: float = 1.0
+@export var greenZoneStart: float = 0.15
+@export var greenZoneEnd: float = 0.30
 
 @export_range(0.0, 1.0) var min_fraction := 0.5
 @export_range(0.0, 1.0) var max_fraction := 1.0
@@ -40,8 +43,8 @@ func start(_sharedData := {}) -> void:
 	can_fill = false
 	ice_bar.value = 0.0
 
-	var window_size := randf_range(0.15, 0.30)
-	min_fraction = randf_range(0.0, 1.0 - window_size)
+	var window_size := randf_range(greenZoneStart, greenZoneEnd)
+	min_fraction = randf_range(greenZoneLowerBound, greenZoneUpperBound - window_size)
 	max_fraction = min_fraction + window_size
 
 	_update_green_zone()
