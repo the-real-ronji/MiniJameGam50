@@ -5,6 +5,8 @@ var collected: Dictionary = {}
 
 signal recipe_complete
 
+
+
 func set_recipe(new_recipe: Dictionary) -> void:
 	recipe = new_recipe
 	collected.clear()
@@ -17,6 +19,11 @@ func accept_ingredient(name: String) -> bool:
 		_check_recipe()
 		return true
 	else:
+		GameManager.attempt += 1
+		$"../../attempts".text = "Attempt: " + str(GameManager.attempt)
+		if GameManager.attempt == 5:
+			GameManager.attempt = 0
+			$"../../GameOver".show()
 		match name:
 			"sugarcubes":
 				$VisualFeedback.text = "Too bitter for a kid’s drink!"

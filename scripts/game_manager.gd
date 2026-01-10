@@ -1,5 +1,6 @@
 extends Node
 
+var attempt: int = 0
 var stage: String = "childhood"
 var childhood_correct = ["fruit", "milk"]
 var childhood_decoys = ["sugar cubes", "ice"]
