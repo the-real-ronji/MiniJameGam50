@@ -36,6 +36,13 @@ offset_bottom = 286.0
 focus_mode = 2
 mouse_filter = 0
 
+[node name="VisualFeedback" type="Label" parent="Control/BlenderZone"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 263.0
+offset_right = 212.0
+offset_bottom = 286.0
+
 [node name="sugarcubes_ingredient" type="TextureRect" parent="Control"]
 layout_mode = 0
 offset_left = 534.0

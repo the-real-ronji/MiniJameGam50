@@ -1,7 +1,7 @@
 extends TextureRect
 
 var dragging := false
-var ingredient_name := "sugar cubes"
+var ingredient_name := "sugarcubes"
 var original_position : Vector2
 
 func _ready():

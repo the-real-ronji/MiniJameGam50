@@ -1,10 +1,8 @@
 extends Node
 
+var stage: String = "childhood"
 var childhood_correct = ["fruit", "milk"]
 var childhood_decoys = ["sugar cubes", "ice"]
-
-var adolescence_correct = ["chocolate", "protein_bar", "energy_drink", "peanut_butter", "soda"]
-var adolescence_decoys = ["herbal_tea", "warm_milk", "yogurt", "turmeric", "kale", "wine", "candy_sprinkles", "ginger"]
 
 func get_childhood_recipes() -> Array:
 	var num_correct = randi_range(3, 6)
