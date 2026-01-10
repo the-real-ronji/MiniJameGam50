@@ -16,7 +16,7 @@ var timing_started := false
 @export var greenZoneLowerBound: float = 0.4
 @export var greenZoneUpperBound: float = 1.0
 @export var greenZoneStart: float = 0.15
-@export var greenZoneEnd: float = 0.30
+@export var greenZoneEnd: float = 0.50
 
 @export_range(0.0, 1.0) var min_fraction := 0.5
 @export_range(0.0, 1.0) var max_fraction := 1.0

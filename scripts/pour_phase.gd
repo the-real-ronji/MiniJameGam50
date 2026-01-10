@@ -4,6 +4,8 @@ signal finished(success: bool, data: Dictionary)
 
 @export var hold_key: String = "ui_accept"   # Key to hold
 @export var fill_speed: float = 0.2          # Fill per second (0-1 scale)
+@export var pourWindow: float = 0.1
+
 @onready var fill_bar: TextureProgressBar = $FillBar
 @onready var label: Label = $Label
 
@@ -22,7 +24,7 @@ func start(_sharedData: Dictionary = {}) -> void:
 	# Pick a random range (10% wide, min >= 0.5)
 	var min_percent = randf_range(0.5, 0.9)   # 50% to 90%
 	min_fill = min_percent
-	max_fill = min_fill + 0.1                 # Always 10% window
+	max_fill = min_fill + pourWindow                 # Always 10% window
 	if max_fill > 1.0:
 		max_fill = 1.0
 	
