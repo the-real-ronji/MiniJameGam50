@@ -44,9 +44,15 @@ func _ready() -> void:
 	randomize()
 	$"blendphase tutorial".show()
 
-func start(_sharedData: Dictionary = {}) -> void:
+func start(data: Dictionary = {}) -> void:
 	var pool: Array[String] = ["1","2","3","4","5","6","7","8","9","0"]
 	sequence = []
+	
+	# Extract life stage
+	var stage = data.get("lifeStage", null)
+	if stage != null:
+		_adjust_difficulty(stage)
+	
 	while sequence.size() < sequenceSize:
 		var choice = pool[randi() % pool.size()]
 		if not sequence.has(choice):
@@ -70,6 +76,7 @@ func _process(delta: float) -> void:
 	_update_image()
 	timer += delta
 	if timer > input_time_window:
+		timer = input_time_window
 		_fail("Too slow!")
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -87,11 +94,28 @@ func _unhandled_input(event: InputEvent) -> void:
 			if timer <= input_time_window:
 				print("Input %s correct!" % expected)
 				current_index += 1
-				timer = 0.0
 				if current_index >= sequence.size():
 					_success()
 			else:
 				_fail("Too slow!")
+
+func _adjust_difficulty(stage : QTEPanel.Stage) -> void:
+	match stage:
+		QTEPanel.Stage.Childhood:
+			sequenceSize = 4
+			input_time_window = 3.5
+		QTEPanel.Stage.Adolescence:
+			sequenceSize = 4
+			input_time_window = 3.0
+		QTEPanel.Stage.YoungAdult:
+			sequenceSize = 5
+			input_time_window = 2.5
+		QTEPanel.Stage.MiddleAge:
+			sequenceSize = 5
+			input_time_window = 1.6
+		QTEPanel.Stage.Senior:
+			sequenceSize = 6
+			input_time_window = 1.6
 
 func _update_image() -> void:
 	if current_index < sequence.size():
@@ -105,7 +129,7 @@ func _update_image() -> void:
 
 func _success() -> void:
 	success = true
-	print("\nBlend phase completed perfectly!")
+	print("\nBlend phase completed perfectly! Time: " + str(timer))
 	_end_phase(true, {"blend_success": true, "inputs_hit": current_index})
 
 func _fail(reason: String) -> void:
@@ -115,7 +139,7 @@ func _fail(reason: String) -> void:
 	waiting_for_enter = true
 	fail_reason = reason
 	set_process(false)
-	print("Blend phase failed: ", reason)
+	print("Blend phase failed: "+ reason +" Time: "+str(timer))
 	image.texture = null
 	_end_phase(false, {"blend_success": false, "inputs_hit": current_index})
 
