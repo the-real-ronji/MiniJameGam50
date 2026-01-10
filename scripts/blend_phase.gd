@@ -22,17 +22,28 @@ signal finished(success: bool, data: Dictionary)
 var current_index: int = 0
 var timer: float = 0.0
 var success: bool = true
+var waiting_for_enter: bool = false
+var fail_reason: String = ""
+
+func _ready() -> void:
+	$"blendphase tutorial".show()
 
 func start(_sharedData: Dictionary = {}) -> void:
 	current_index = 0
 	timer = 0.0
 	success = true
+	waiting_for_enter = false
+	fail_reason = ""
 	set_process(true)
 	set_process_unhandled_input(true)
 	_update_image()
 	print("Blend phase started! Sequence: ", sequence)
 
 func _process(delta: float) -> void:
+	# Freeze gameplay while tutorial is visible
+	if $"blendphase tutorial".visible:
+		return
+
 	if not success or current_index >= sequence.size():
 		return
 	
@@ -42,6 +53,10 @@ func _process(delta: float) -> void:
 		_fail("Too slow!")
 
 func _unhandled_input(event: InputEvent) -> void:
+	# Ignore inputs while tutorial is visible
+	if $"blendphase tutorial".visible:
+		return
+
 	if not success or current_index >= sequence.size():
 		return
 	
@@ -79,14 +94,30 @@ func _fail(reason: String) -> void:
 	if not success:
 		return
 	success = false
+	waiting_for_enter = true
+	fail_reason = reason
+	set_process(false)  # freeze updates
 	print("Blend phase failed: ", reason)
-	_end_phase(false, {
-		"blend_success": false,
-		"failed_at": current_index,
-		"reason": reason
-	})
+	image.texture = null   # clear image immediately
 
 func _end_phase(successful: bool, data: Dictionary) -> void:
 	set_process(false)
 	set_process_unhandled_input(false)
 	finished.emit(successful, data)
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ENTER:
+			if waiting_for_enter:
+				waiting_for_enter = false
+				$"blendphase tutorial".hide()
+				_end_phase(false, {
+					"blend_success": false,
+					"failed_at": current_index,
+					"reason": fail_reason
+				})
+			else:
+				# Normal Enter behavior (hide tutorial at start)
+				$"blendphase tutorial".hide()
+				# Reset timer so player gets a fresh window after tutorial
+				timer = 0.0
