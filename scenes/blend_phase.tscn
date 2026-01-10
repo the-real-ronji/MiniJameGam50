@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ukvjrq38e4cj"]
+[gd_scene load_steps=3 format=3 uid="uid://ukvjrq38e4cj"]
 
 [ext_resource type="Script" uid="uid://d0ubr77mhi0h3" path="res://scripts/blend_phase.gd" id="1_io2sw"]
+[ext_resource type="Texture2D" uid="uid://cwkjb22dlhl2u" path="res://Sprites/temp sprites prototype/w.jpg" id="2_ietne"]
 
 [node name="BlendPhase" type="Control"]
 layout_mode = 3
@@ -8,3 +9,9 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_io2sw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ietne")
