@@ -5,6 +5,8 @@ signal finished(success: bool, data: Dictionary)
 @export var hold_key: String = "ui_accept"   # Key to hold
 @export var fill_speed: float = 0.2          # Fill per second (0-1 scale)
 @export var pourWindow: float = 0.2
+@export var lowerBound: float = 0.5
+@export var upperBound: float = 0.9
 
 @onready var fill_bar: TextureProgressBar = $FillBar
 @onready var label: Label = $Label
@@ -15,11 +17,16 @@ var success := true
 var min_fill: float = 0.7
 var max_fill: float = 0.8
 
-func start(_sharedData: Dictionary = {}) -> void:
+func start(data: Dictionary = {}) -> void:
 	holding = false
 	fill_amount = 0.0
 	success = true
 	fill_bar.value = 0.0
+	
+	# Extract life stage
+	var stage = data.get("lifeStage", null)
+	if stage != null:
+		_adjust_difficulty(stage)
 	
 	# Pick a random range (10% wide, min >= 0.5)
 	var min_percent = randf_range(0.5, 0.9)   # 50% to 90%
@@ -59,6 +66,19 @@ func _unhandled_input(event: InputEvent) -> void:
 			_success()
 		else:
 			_fail("Incorrect fill level! Filled %.0f%%" % (fill_amount*100))
+
+func _adjust_difficulty(stage : QTEPanel.Stage) -> void:
+	match stage:
+		QTEPanel.Stage.Childhood:
+			pass
+		QTEPanel.Stage.Adolescence:
+			pass
+		QTEPanel.Stage.YoungAdult:
+			pass
+		QTEPanel.Stage.MiddleAge:
+			pass
+		QTEPanel.Stage.Senior:
+			pass
 
 func _success() -> void:
 	success = true

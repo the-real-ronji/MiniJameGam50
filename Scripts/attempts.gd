@@ -1,7 +1,7 @@
 extends Label
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if GameManager.attempt >0:
 		self.text = "Attempt: " + str(GameManager.attempt)
 		$"../Control/UIs/GameOver".hide()

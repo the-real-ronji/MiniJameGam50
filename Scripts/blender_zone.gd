@@ -15,10 +15,10 @@ func set_recipe(new_recipe: Dictionary) -> void:
 	collected.clear()
 	print("Blender set with recipe: %s" % recipe)
 
-func accept_ingredient(name: String) -> bool:
-	if recipe.has(name) and GameManager.stage == "childhood":
-		collected[name] = (collected.get(name, 0) + 1)
-		print("Ingredient correct: %s" % name)
+func accept_ingredient(ingredientName: String) -> bool:
+	if recipe.has(ingredientName) and GameManager.stage == "childhood":
+		collected[ingredientName] = (collected.get(ingredientName, 0) + 1)
+		print("Ingredient correct: %s" % ingredientName)
 		_check_recipe()
 		return true
 	else:
