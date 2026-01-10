@@ -2,9 +2,9 @@ extends Control
 
 signal finished(success: bool, data: Dictionary)
 
-@export var sequence: Array[String] = ["W", "D", "S", "A", "W", "D", "S", "A"]  # Default: childhood
-@export var input_map: Dictionary[String, String] = {"W": "w", "A": "a", "D": "d", "S": "s"}  # Key mapping
-@export var input_time_window: float = 3.0  # seconds allowed per input
+@export var sequence: Array[String] = ["W", "D", "S", "A", "W", "D", "S", "A"]
+@export var input_map: Dictionary[String, String] = {"W": "w", "A": "a", "D": "d", "S": "s"}
+@export var input_time_window: float = 3.0
 @export var letterTextures: Dictionary[String, Texture] = {
 	"W": preload("res://Sprites/temp sprites prototype/w.jpg"),
 	"A": preload("res://Sprites/temp sprites prototype/a.jpg"),
@@ -14,10 +14,10 @@ signal finished(success: bool, data: Dictionary)
 
 @onready var image: TextureRect = $image
 
-
 var current_index: int = 0
 var timer: float = 0.0
 var success: bool = true
+var tutorial_active: bool = true
 
 func start(_sharedData: Dictionary = {}) -> void:
 	current_index = 0
@@ -29,16 +29,19 @@ func start(_sharedData: Dictionary = {}) -> void:
 	print("Blend phase started! Sequence: ", sequence)
 
 func _process(delta: float) -> void:
+	if tutorial_active:
+		return
 	if not success or current_index >= sequence.size():
 		return
+	
 	_update_image()
-	
-	
 	timer += delta
 	if timer > input_time_window:
 		_fail("Too slow!")
 
 func _unhandled_input(event: InputEvent) -> void:
+	if tutorial_active:
+		return
 	if not success or current_index >= sequence.size():
 		return
 	
@@ -83,3 +86,10 @@ func _end_phase(successful: bool, data: Dictionary) -> void:
 	set_process(false)
 	set_process_unhandled_input(false)
 	finished.emit(successful, data)
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ENTER:
+			$"blendphase tutorial".hide()
+			tutorial_active = false
+			timer = 0.0

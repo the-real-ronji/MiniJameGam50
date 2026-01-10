@@ -92,10 +92,10 @@ script = ExtResource("11_frkhe")
 
 [node name="QTEPanel" parent="." instance=ExtResource("11_4kpch")]
 layout_mode = 1
-offset_left = 197.0
-offset_top = 64.0
-offset_right = -551.0
-offset_bottom = -367.0
+offset_left = 642.0
+offset_top = 52.0
+offset_right = -106.0
+offset_bottom = -379.0
 
 [node name="Phases" type="Control" parent="QTEPanel"]
 anchors_preset = 0
