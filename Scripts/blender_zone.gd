@@ -23,7 +23,7 @@ func accept_ingredient(name: String) -> bool:
 		$"../../attempts".text = "Attempt: " + str(GameManager.attempt)
 		if GameManager.attempt == 5:
 			GameManager.attempt = 0
-			$"../../GameOver".show()
+			$"../UIs/GameOver".show()
 		match name:
 			"sugarcubes":
 				$VisualFeedback.text = "Too bitter for a kid’s drink!"

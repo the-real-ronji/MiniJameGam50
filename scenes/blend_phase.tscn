@@ -21,6 +21,7 @@ scale = Vector2(0.8062846, 0.78215426)
 texture = ExtResource("2_ietne")
 
 [node name="blendphase tutorial" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="blendphase tutorial"]
 offset_right = 1215.0
