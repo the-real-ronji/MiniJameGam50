@@ -5,8 +5,9 @@ signal finished(success: bool, data: Dictionary)
 @export var hold_key: String = "ui_accept"   # Key to hold
 @export var min_fill: float = 0.7           # Minimum success percentage
 @export var max_fill: float = 0.8           # Maximum success percentage
-@export var fill_speed: float = 0.5         # Fill per second (0-1 scale)
+@export var fill_speed: float = 0.2         # Fill per second (0-1 scale)
 @onready var fill_bar: TextureProgressBar = $FillBar
+@onready var label: Label = $Label
 
 var holding := false
 var fill_amount := 0.0
@@ -31,6 +32,8 @@ func _process(delta: float) -> void:
 	# Optional: Fail if overfill
 	if fill_amount > 1.0:
 		_fail("Overfilled!")
+	
+	label.text = "%.1f%%" % (fill_amount*100.0) 	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not success:
