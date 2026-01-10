@@ -13,7 +13,7 @@ var holding := false
 var fill_amount := 0.0
 var success := true
 
-func start(sharedData: Dictionary = {}) -> void:
+func start(_sharedData: Dictionary = {}) -> void:
 	holding = false
 	fill_amount = 0.0
 	success = true
