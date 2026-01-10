@@ -117,6 +117,7 @@ func _fail(reason: String) -> void:
 	set_process(false)
 	print("Blend phase failed: ", reason)
 	image.texture = null
+	_end_phase(false, {"blend_success": false, "inputs_hit": current_index})
 
 func _end_phase(successful: bool, data: Dictionary) -> void:
 	set_process(false)
