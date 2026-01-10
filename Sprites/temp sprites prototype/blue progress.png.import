@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8sfukwtw078h"
-path="res://.godot/imported/perfect.png-b24136b3a1c1274f65d2f23248239320.ctex"
+uid="uid://dy617vwhfcu3l"
+path="res://.godot/imported/blue progress.png-50579bbe6e0b2d8fb82fdefd7c78c7cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/temp sprites prototype/perfect.png"
-dest_files=["res://.godot/imported/perfect.png-b24136b3a1c1274f65d2f23248239320.ctex"]
+source_file="res://Sprites/temp sprites prototype/blue progress.png"
+dest_files=["res://.godot/imported/blue progress.png-50579bbe6e0b2d8fb82fdefd7c78c7cd.ctex"]
 
 [params]
 
