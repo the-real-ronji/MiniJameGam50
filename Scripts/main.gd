@@ -40,7 +40,7 @@ func _on_qte_finished(success: bool, data: Dictionary) -> void:
 	qte_panel.hide()
 	
 	if success:
-		print("Drink prepared successgully!")
+		print("Drink prepared successfully!")
 		print("Run data: ", data)
 	else:
 		print("Drink failed!")

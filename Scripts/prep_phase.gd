@@ -53,14 +53,14 @@ func _unhandled_input(event: InputEvent) -> void:
 			_fail("Too late!")
 
 func _success():
-	print("✅ Perfect ice prep! Timing was ", elapsed, " seconds.")
+	print("\n✅ Perfect ice prep! Timing was ", elapsed, " seconds.")
 	_end_phase(true, {
 		"prep_quality": remap(elapsed, min_time, max_time, 1.0, 0.7),
 		"timing": elapsed
 	})
 
 func _fail(reason: String):
-	print("❌ Prep failed: ", reason, " (pressed at ", elapsed, " seconds)")
+	print("\n❌ Prep failed: ", reason, " (pressed at ", elapsed, " seconds)")
 	_end_phase(false, {
 		"reason": reason,
 		"timing": elapsed
