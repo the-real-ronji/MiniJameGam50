@@ -13,7 +13,6 @@ var phases : Array[PackedScene]= [
 func _ready() -> void:
 	if blender:
 		blender.connect("recipe_complete", Callable(self, "_on_recipe_complete"))
-		# ✅ Set the recipe from GameManager
 		var recipe = GameManager.get_childhood_recipe()
 		blender.set_recipe(recipe)
 	else:

@@ -5,7 +5,7 @@ var ingredient_name := "sugar cubes"
 var original_position : Vector2
 
 func _ready():
-	original_position = position  # remember starting spot
+	original_position = position 
 
 func _gui_input(event):
 	if event is InputEventMouseButton:
@@ -27,11 +27,8 @@ func _check_drop_zone():
 	if ingredient_rect.intersects(blender_rect):
 		var accepted = blender.accept_ingredient(ingredient_name)
 		if accepted:
-			# Snap into blender zone
 			position = blender.position + Vector2(20, 20)
 		else:
-			# Wrong ingredient → return to shelf
 			position = original_position
 	else:
-		# Dropped outside blender → return to shelf
 		position = original_position

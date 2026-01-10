@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qc4v5ec8mgv8"]
 
-[ext_resource type="Script" uid="uid://ggdqejwff1xp" path="res://scripts/prep_phase.gd" id="1_nmes1"]
+[ext_resource type="Script" uid="uid://ggdqejwff1xp" path="res://Scripts/prep_phase.gd" id="1_nmes1"]
 
 [node name="PrepPhase" type="Control"]
 layout_mode = 3
@@ -14,25 +14,7 @@ size_flags_vertical = 0
 focus_mode = 2
 script = ExtResource("1_nmes1")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -20.0
-offset_right = 390.0
-offset_bottom = 20.0
-grow_vertical = 2
-
-[node name="IceBar" type="TextureProgressBar" parent="."]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -20.0
-offset_right = 390.0
-offset_bottom = 20.0
-grow_vertical = 2
-tint_under = Color(0, 0, 0, 1)
-tint_over = Color(0, 1, 1, 1)
-tint_progress = Color(0, 0, 0, 1)
+[node name="IceBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 313.0
+offset_bottom = 27.0
