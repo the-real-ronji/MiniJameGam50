@@ -30,6 +30,7 @@ func start(_sharedData: Dictionary = {}) -> void:
 	set_process_unhandled_input(true)
 	print("Pour phase started! Hold '%s' and release between %.0f%% and %.0f%%." 
 		% [hold_key, min_fill*100, max_fill*100])
+	$range.text = "%.0f%% - %.0f%%" % [min_fill * 100, max_fill * 100]
 
 func _process(delta: float) -> void:
 	if holding:

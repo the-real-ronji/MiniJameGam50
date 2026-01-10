@@ -2,19 +2,21 @@ extends Control
 
 signal finished(success: bool, data: Dictionary)
 
-@export var sequence: Array[String] = ["W", "D", "S", "A", "W", "D", "S", "A"]  # Default: childhood
-@export var input_map: Dictionary[String, String] = {
-	"W": "w",
-	"A": "a",
-	"D": "d",
-	"S": "s"
-}  # Key mapping
-@export var input_time_window: float = 3.0  # seconds allowed per input
-@export var letterTextures: Dictionary[String, Texture] = {
-	"W": preload("res://Sprites/temp sprites prototype/w.jpg"),
-	"A": preload("res://Sprites/temp sprites prototype/a.jpg"),
-	"S": preload("res://Sprites/temp sprites prototype/s.jpg"),
-	"D": preload("res://Sprites/temp sprites prototype/d.png")
+@export var sequence: Array[String] = []  # will be set at start
+@export var input_time_window: float = 3.0
+
+# Preload your number sprites here
+@export var numberTextures: Dictionary[String, Texture] = {
+	"1": preload("res://Sprites/temp sprites prototype/numbers/1.jpg"),
+	"2": preload("res://Sprites/temp sprites prototype/numbers/2.jpg"),
+	"3": preload("res://Sprites/temp sprites prototype/numbers/3.jpg"),
+	"4": preload("res://Sprites/temp sprites prototype/numbers/4.jpg"),
+	"5": preload("res://Sprites/temp sprites prototype/numbers/5.jpg"),
+	"6": preload("res://Sprites/temp sprites prototype/numbers/6.jpg"),
+	"7": preload("res://Sprites/temp sprites prototype/numbers/7.jpg"),
+	"8": preload("res://Sprites/temp sprites prototype/numbers/8.jpg"),
+	"9": preload("res://Sprites/temp sprites prototype/numbers/9.jpg"),
+	"0": preload("res://Sprites/temp sprites prototype/numbers/0.jpg")
 }
 
 @onready var image: TextureRect = $image
@@ -25,10 +27,30 @@ var success: bool = true
 var waiting_for_enter: bool = false
 var fail_reason: String = ""
 
+# Map sequence entries to actual keycodes (top row numbers)
+var keycodes = {
+	"1": KEY_1, "2": KEY_2, "3": KEY_3, "4": KEY_4, "5": KEY_5,
+	"6": KEY_6, "7": KEY_7, "8": KEY_8, "9": KEY_9, "0": KEY_0
+}
+
+# Allow numpad keys too
+var numpad_keycodes = {
+	"1": KEY_KP_1, "2": KEY_KP_2, "3": KEY_KP_3, "4": KEY_KP_4, "5": KEY_KP_5,
+	"6": KEY_KP_6, "7": KEY_KP_7, "8": KEY_KP_8, "9": KEY_KP_9, "0": KEY_KP_0
+}
+
 func _ready() -> void:
+	randomize()
 	$"blendphase tutorial".show()
 
 func start(_sharedData: Dictionary = {}) -> void:
+	var pool: Array[String] = ["1","2","3","4","5","6","7","8","9","0"]
+	sequence = []
+	while sequence.size() < 4:
+		var choice = pool[randi() % pool.size()]
+		if not sequence.has(choice):
+			sequence.append(choice)
+
 	current_index = 0
 	timer = 0.0
 	success = true
@@ -40,46 +62,41 @@ func start(_sharedData: Dictionary = {}) -> void:
 	print("Blend phase started! Sequence: ", sequence)
 
 func _process(delta: float) -> void:
-	# Freeze gameplay while tutorial is visible
 	if $"blendphase tutorial".visible:
 		return
-
 	if not success or current_index >= sequence.size():
 		return
-	
 	_update_image()
 	timer += delta
 	if timer > input_time_window:
 		_fail("Too slow!")
 
 func _unhandled_input(event: InputEvent) -> void:
-	# Ignore inputs while tutorial is visible
 	if $"blendphase tutorial".visible:
 		return
-
 	if not success or current_index >= sequence.size():
 		return
-	
-	var expected_key: String = input_map.get(sequence[current_index], "")
-	if expected_key == "":
-		push_error("No mapping for input: %s" % sequence[current_index])
-		return
 
-	if event.is_action_pressed(expected_key):
-		if timer <= input_time_window:
-			print("Input %s correct!" % sequence[current_index])
-			current_index += 1
-			timer = 0.0
-			if current_index >= sequence.size():
-				_success()
-		else:
-			_fail("Too slow!")
+	if event is InputEventKey and event.pressed:
+		var expected = sequence[current_index]
+		var top_row = keycodes.get(expected, -1)
+		var numpad = numpad_keycodes.get(expected, -1)
+
+		if event.keycode == top_row or event.keycode == numpad:
+			if timer <= input_time_window:
+				print("Input %s correct!" % expected)
+				current_index += 1
+				timer = 0.0
+				if current_index >= sequence.size():
+					_success()
+			else:
+				_fail("Too slow!")
 
 func _update_image() -> void:
 	if current_index < sequence.size():
-		var letter := sequence[current_index]
-		if letterTextures.has(letter):
-			image.texture = letterTextures[letter]
+		var key = sequence[current_index]
+		if numberTextures.has(key):
+			image.texture = numberTextures[key]
 		else:
 			image.texture = null
 	else:
@@ -96,9 +113,9 @@ func _fail(reason: String) -> void:
 	success = false
 	waiting_for_enter = true
 	fail_reason = reason
-	set_process(false)  # freeze updates
+	set_process(false)
 	print("Blend phase failed: ", reason)
-	image.texture = null   # clear image immediately
+	image.texture = null
 
 func _end_phase(successful: bool, data: Dictionary) -> void:
 	set_process(false)
@@ -117,7 +134,6 @@ func _input(event: InputEvent) -> void:
 					"reason": fail_reason
 				})
 			else:
-				# Normal Enter behavior (hide tutorial at start)
 				$"blendphase tutorial".hide()
-				# Reset timer so player gets a fresh window after tutorial
 				timer = 0.0
+ 
