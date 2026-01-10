@@ -2,7 +2,7 @@ extends Node
 
 # --- Ingredient pools ---
 # childhood stage
-var childhood_correct = ["banana", "honey", "milk"]
+var childhood_correct = ["apple", "banana", "honey", "milk", "strawberry", "cookies"]
 var childhood_decoys = ["soda", "coffee", "spicy chips", "raw meat", "energy drink", "garlic", "vinegar", "alcohol"]
 
 # adolescence stage

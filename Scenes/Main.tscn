@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://diiwudvk716im"]
+[gd_scene load_steps=19 format=3 uid="uid://diiwudvk716im"]
 
 [ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://Scripts/main.gd" id="1_bmxlf"]
 [ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://Scenes/blender_zone.tscn" id="1_vy5pj"]
@@ -11,7 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://cnmrc6yemaajd" path="res://Sprites/temp sprites prototype/images (1).jpg" id="8_erwvk"]
 [ext_resource type="Script" uid="uid://bjkqb8vtaslwq" path="res://Scripts/meat_ingredient.gd" id="9_2w5on"]
 [ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://Scenes/qte_panel.tscn" id="11_4kpch"]
+[ext_resource type="Texture2D" uid="uid://bgj25b6rwvdjp" path="res://Sprites/temp sprites prototype/apple.jpg" id="11_346fj"]
+[ext_resource type="Script" uid="uid://gwy6o0at33rv" path="res://Scenes/apple_ingredient.gd" id="11_frkhe"]
+[ext_resource type="Script" uid="uid://c0yjb5tlp4qop" path="res://Scenes/strawberry_ingredient.gd" id="12_1p5hy"]
 [ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://game_manager.gd" id="12_grg3l"]
+[ext_resource type="Texture2D" uid="uid://bsfxxbs3k0rry" path="res://Sprites/temp sprites prototype/strawberry.jpg" id="13_0sclb"]
+[ext_resource type="Script" uid="uid://dkwdlgfcp64n3" path="res://Scenes/cookies_ingredient.gd" id="13_h1m7h"]
+[ext_resource type="Texture2D" uid="uid://c0bj8m0s361b2" path="res://Sprites/temp sprites prototype/cookies.jpg" id="15_sxkr1"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -83,6 +89,42 @@ mouse_filter = 0
 texture = ExtResource("8_erwvk")
 expand_mode = 1
 script = ExtResource("9_2w5on")
+
+[node name="apple_ingredient" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 954.0
+offset_top = 344.0
+offset_right = 1104.0
+offset_bottom = 494.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("11_346fj")
+expand_mode = 1
+script = ExtResource("11_frkhe")
+
+[node name="strawberry_ingredient" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 982.0
+offset_top = 153.0
+offset_right = 1132.0
+offset_bottom = 303.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("13_0sclb")
+expand_mode = 1
+script = ExtResource("12_1p5hy")
+
+[node name="cookies_ingredient" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 123.0
+offset_right = 934.0
+offset_bottom = 273.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("15_sxkr1")
+expand_mode = 1
+script = ExtResource("13_h1m7h")
 
 [node name="QTEPanel" parent="." instance=ExtResource("11_4kpch")]
 layout_mode = 1
