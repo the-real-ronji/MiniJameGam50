@@ -7,6 +7,7 @@ signal finished(success: bool, data: Dictionary)
 @onready var green: ColorRect = $Green
 @onready var white: ColorRect = $White
 @onready var tutorial := $"prepphase tutorial"
+@onready var anim := $AnimatedSprite2D
 
 # --- State ---
 var pressed: bool = false

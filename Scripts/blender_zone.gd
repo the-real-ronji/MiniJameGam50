@@ -16,6 +16,10 @@ func _ready() -> void:
 	feedback_label.visible = false
 	blender_sprite.stop()
 
+func _process(delta: float) -> void:
+	var anim = self.get_child(0)
+	if GameManager.is_blending == true:
+		anim.play("blending")
 
 func show_feedback(text: String) -> void:
 	feedback_label.text = text

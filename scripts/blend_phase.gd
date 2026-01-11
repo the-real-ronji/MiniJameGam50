@@ -40,6 +40,7 @@ var numpad_keycodes = {
 func _ready() -> void:
 	randomize()
 	$"blendphase tutorial".show()
+	GameManager.is_blending = true
 
 func start(data: Dictionary = {}) -> void:
 	var pool: Array[String] = ["1","2","3","4","5","6","7","8","9","0"]
@@ -123,6 +124,7 @@ func _success() -> void:
 	success = true
 	print("\nBlend phase completed perfectly! Time: " + str(timer))
 	_end_phase(true, {"blend_success": true, "inputs_hit": current_index})
+	GameManager.is_blending = false
 
 func _fail(reason: String) -> void:
 	if not success:

@@ -367,6 +367,7 @@ position = Vector2(210.00002, 199)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_vjepe")
 animation = &"blending"
+animation = &"stanby"
 autoplay = "stanby"
 
 [node name="VisualFeedback" type="Label" parent="."]

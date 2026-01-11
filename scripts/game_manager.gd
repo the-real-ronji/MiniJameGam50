@@ -4,6 +4,7 @@ var attempt: int = 0
 var stage: String = "childhood"
 var childhood_correct = ["fruit", "milk"]
 var childhood_decoys = ["sugar cubes", "ice"]
+var is_blending = false
 
 func get_childhood_recipes() -> Array:
 	var num_correct = randi_range(3, 6)
