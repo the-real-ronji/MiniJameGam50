@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bj2qvkd8b8pop"]
+[gd_scene load_steps=14 format=3 uid="uid://bj2qvkd8b8pop"]
 
 [ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_21m4i"]
 [ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://scenes/blender_zone.tscn" id="2_qp0hf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bl6knngwrqtxu" path="res://scenes/ingredients/ice_ingredient.tscn" id="5_bant6"]
 [ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://scenes/ingredients/apple_ingredient.tscn" id="6_xipx0"]
 [ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://scripts/game_over.gd" id="7_0x85d"]
+[ext_resource type="PackedScene" uid="uid://cwk3nfc0re1l6" path="res://scenes/ingredients/honey_ingredient.tscn" id="7_86v5a"]
 [ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="8_mcfah"]
 [ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="9_5utie"]
 [ext_resource type="PackedScene" uid="uid://bw2qrmlgvnegg" path="res://scenes/success_overlay.tscn" id="10_65d7v"]
@@ -43,12 +44,43 @@ offset_top = 263.0
 offset_right = 212.0
 offset_bottom = 286.0
 
+[node name="chocolate_ingredient" parent="Control" instance=ExtResource("10_86v5a")]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 461.00003
+offset_right = 467.0
+offset_bottom = 639.0
+scale = Vector2(0.8885338, 0.90817285)
+
+[node name="Milk_ingredient" parent="Control" instance=ExtResource("4_yxtw4")]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 432.00003
+offset_right = 649.0
+offset_bottom = 615.0
+scale = Vector2(0.8885338, 0.90817285)
+
+[node name="ice_ingredient" parent="Control" instance=ExtResource("5_bant6")]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 481.00003
+offset_right = 806.0
+offset_bottom = 631.0
+scale = Vector2(0.8885338, 0.90817285)
+
+[node name="honey_ingredient" parent="Control" instance=ExtResource("7_86v5a")]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 531.0
+offset_right = 675.0
+offset_bottom = 629.0
+
 [node name="apple_ingredient" parent="Control" instance=ExtResource("6_xipx0")]
 layout_mode = 0
-offset_left = 397.0
-offset_top = 465.0
-offset_right = 505.0
-offset_bottom = 574.0
+offset_left = 406.00003
+offset_top = 522.0
+offset_right = 514.0
+offset_bottom = 631.0
 scale = Vector2(0.8885338, 0.90817285)
 
 [node name="UIs" type="Node" parent="Control"]
@@ -87,6 +119,7 @@ offset_left = 642.0
 offset_top = 52.0
 offset_right = -106.0
 offset_bottom = -379.0
+lifeStage = 1
 
 [node name="Phases" type="Control" parent="QTEPanel"]
 anchors_preset = 0
@@ -103,29 +136,5 @@ layout_mode = 0
 offset_right = 1.0
 offset_bottom = 23.0
 script = ExtResource("11_e8h0i")
-
-[node name="chocolate_ingredient" parent="." instance=ExtResource("10_86v5a")]
-layout_mode = 0
-offset_left = 242.0
-offset_top = 437.0
-offset_right = 431.0
-offset_bottom = 615.0
-scale = Vector2(0.8885338, 0.90817285)
-
-[node name="Milk_ingredient" parent="." instance=ExtResource("4_yxtw4")]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 432.0
-offset_right = 685.0
-offset_bottom = 615.0
-scale = Vector2(0.8885338, 0.90817285)
-
-[node name="ice_ingredient" parent="." instance=ExtResource("5_bant6")]
-layout_mode = 0
-offset_left = 678.0
-offset_top = 465.0
-offset_right = 828.0
-offset_bottom = 615.0
-scale = Vector2(0.8885338, 0.90817285)
 
 [connection signal="pressed" from="Control/UIs/GameOver/retry" to="Control/UIs/GameOver" method="_on_retry_pressed"]
