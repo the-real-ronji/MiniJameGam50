@@ -33,8 +33,8 @@ func get_adolescence_recipe() -> Dictionary:
 		"protein_powder": 1,
 	}
 
-func get_recipe(stage : Main.Stage) -> Dictionary:
-	match stage:
+func get_recipe(lifeStage : Main.Stage) -> Dictionary:
+	match lifeStage:
 		Main.Stage.Childhood:
 			return get_childhood_recipe()
 		Main.Stage.Adolescence:

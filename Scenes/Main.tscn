@@ -1,17 +1,17 @@
 [gd_scene load_steps=13 format=3 uid="uid://diiwudvk716im"]
 
-[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://Scripts/main.gd" id="1_bmxlf"]
-[ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://Scenes/blender_zone.tscn" id="1_vy5pj"]
-[ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://Scenes/ingredients/sugarcubes_ingredient.tscn" id="3_qmy6f"]
+[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_bmxlf"]
+[ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://scenes/blender_zone.tscn" id="1_vy5pj"]
+[ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://scenes/ingredients/sugarcubes_ingredient.tscn" id="3_qmy6f"]
 [ext_resource type="Texture2D" uid="uid://cqgvffxxwnmoq" path="res://Sprites/final sprites/SUGAR-export.png" id="4_2w5on"]
-[ext_resource type="PackedScene" uid="uid://do6w53ssty7sj" path="res://Scenes/ingredients/milk_ingredient.tscn" id="4_mwfav"]
-[ext_resource type="PackedScene" uid="uid://bl6knngwrqtxu" path="res://Scenes/ingredients/ice_ingredient.tscn" id="5_3p2gp"]
-[ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://Scenes/ingredients/apple_ingredient.tscn" id="6_cvmbd"]
-[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://Scenes/qte_panel.tscn" id="11_4kpch"]
+[ext_resource type="PackedScene" uid="uid://do6w53ssty7sj" path="res://scenes/ingredients/milk_ingredient.tscn" id="4_mwfav"]
+[ext_resource type="PackedScene" uid="uid://bl6knngwrqtxu" path="res://scenes/ingredients/ice_ingredient.tscn" id="5_3p2gp"]
+[ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://scenes/ingredients/apple_ingredient.tscn" id="6_cvmbd"]
+[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="11_4kpch"]
 [ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="12_grg3l"]
-[ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://Scripts/game_over.gd" id="13_frkhe"]
-[ext_resource type="PackedScene" path="res://scenes/success_overlay.tscn" id="14_mwfav"]
-[ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://Scripts/attempts.gd" id="15_h1m7h"]
+[ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://scripts/game_over.gd" id="13_frkhe"]
+[ext_resource type="PackedScene" uid="uid://bw2qrmlgvnegg" path="res://scenes/success_overlay.tscn" id="14_mwfav"]
+[ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://scripts/attempts.gd" id="15_h1m7h"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -55,8 +55,8 @@ offset_bottom = 526.0
 [node name="apple_ingredient" parent="Control" instance=ExtResource("6_cvmbd")]
 layout_mode = 0
 offset_left = 446.0
-offset_top = 420.0
-offset_right = 596.0
+offset_top = 455.0
+offset_right = 561.0
 offset_bottom = 570.0
 
 [node name="UIs" type="Node" parent="Control"]

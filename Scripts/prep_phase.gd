@@ -1,4 +1,3 @@
-@tool
 extends Control
 
 signal finished(success: bool, data: Dictionary)
@@ -7,7 +6,7 @@ signal finished(success: bool, data: Dictionary)
 @onready var green: ColorRect = $Green
 @onready var white: ColorRect = $White
 @onready var tutorial := $"prepphase tutorial"
-@onready var anim := $AnimatedSprite2D
+#@onready var anim := $AnimatedSprite2D
 
 # --- State ---
 var pressed: bool = false
@@ -17,6 +16,11 @@ var timing_started := false
 
 # --- Timing config ---
 @export var total_time: float = 3.0      # full bar duration (seconds)
+
+# --- Difficulty tuning ----
+@export var window_min_size := 0.15
+@export var window_max_size := 0.30
+@export var window_min_start := 0.0
 
 # success window as FRACTIONS of total_time (0–1)
 @export_range(0.0, 1.0) var min_fraction := 0.4
@@ -38,7 +42,7 @@ func _ready() -> void:
 	set_process_unhandled_input(false)
 
 
-func start(_sharedData := {}) -> void:
+func start(data := {}) -> void:
 	pressed = false
 	elapsed = 0.0
 	can_fill = false
@@ -48,9 +52,13 @@ func start(_sharedData := {}) -> void:
 	var window_size := randf_range(0.15, 0.30)   # 15%–30% bar size
 	min_fraction = randf_range(0.0, 1.0 - window_size)
 	max_fraction = min_fraction + window_size
+	
+	var stage = data.get("lifeStage", null)
+	if stage != null:
+		_adjust_difficulty(stage)
 
 	_update_green_zone()
-
+	
 	set_process(true)
 	set_process_unhandled_input(true)
 
@@ -61,6 +69,38 @@ func start(_sharedData := {}) -> void:
 			total_time * max_fraction
 		]
 	)
+
+func _adjust_difficulty(stage: Main.Stage) -> void:
+	match stage:
+		Main.Stage.Childhood:
+			total_time = 1.6
+			window_min_size = 0.25
+			window_max_size = 0.50
+			window_min_start = 0.40
+
+		Main.Stage.Adolescence:
+			total_time = 1.3
+			window_min_size = 0.20
+			window_max_size = 0.35
+			window_min_start = 0.35
+
+		Main.Stage.YoungAdult:
+			total_time = 1.1
+			window_min_size = 0.18
+			window_max_size = 0.30
+			window_min_start = 0.40
+
+		Main.Stage.MiddleAge:
+			total_time = 0.9
+			window_min_size = 0.15
+			window_max_size = 0.25
+			window_min_start = 0.45
+
+		Main.Stage.Senior:
+			total_time = 0.75
+			window_min_size = 0.10
+			window_max_size = 0.18
+			window_min_start = 0.50
 
 
 func _process(delta: float) -> void:

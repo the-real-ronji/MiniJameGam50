@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://do6w53ssty7sj"]
 
 [ext_resource type="Texture2D" uid="uid://djxqer32a8gcc" path="res://Sprites/final sprites/MILK-export.png" id="1_e4kb6"]
-[ext_resource type="Script" uid="uid://b5c4jyefuyu5a" path="res://Scripts/milk_ingredient.gd" id="2_w8ha3"]
+[ext_resource type="Script" uid="uid://b5c4jyefuyu5a" path="res://scripts/milk_ingredient.gd" id="2_w8ha3"]
 
 [node name="milk_ingredient" type="TextureRect"]
 offset_left = 101.0
