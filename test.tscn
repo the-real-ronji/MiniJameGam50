@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dijxh66eub6hi"]
+
+[ext_resource type="Script" path="res://Scenes/area_2d_2.gd" id="1_8uh7m"]
+[ext_resource type="Texture2D" path="res://Sprites/APPLE.png" id="2_6uqi0"]
+
+[node name="Area2D2" type="Area2D"]
+script = ExtResource("1_8uh7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6uqi0")
+
+[node name="collision" type="CollisionPolygon2D" parent="."]
+position = Vector2(-2, 9)
+polygon = PackedVector2Array(-16, -58, -3, -43, -4, -37, -31, -36, -42, -24, -47, -15, -47, 12, -43, 21, -39, 31, -35, 39, -19, 54, -17, 57, -7, 56, -2, 53, -1, 47, 4, 48, 4, 52, 12, 53, 12, 56, 21, 56, 21, 52, 29, 52, 45, 36, 46, 25, 49, 20, 50, -19, 34, -36, 26, -37, 30, -41, 34, -46, 38, -52, 39, -69, 33, -74, 29, -73, 25, -67, 25, -62, 14, -61, 7, -55, 5, -50, -1, -49, -2, -52, -6, -53, -5, -57, -9, -57, -10, -61, -17, -63)
+
+[node name="Node" type="Node" parent="."]
