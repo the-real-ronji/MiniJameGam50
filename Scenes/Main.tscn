@@ -28,14 +28,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="BlenderZone" parent="Control" instance=ExtResource("1_vy5pj")]
-position = Vector2(429, 246)
-
-[node name="VisualFeedback" type="Label" parent="Control/BlenderZone"]
-visible = false
-offset_left = 8.0
-offset_top = 263.0
-offset_right = 212.0
-offset_bottom = 286.0
+position = Vector2(187, 73)
 
 [node name="sugarcubes_ingredient" parent="Control" instance=ExtResource("3_qmy6f")]
 layout_mode = 0

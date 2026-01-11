@@ -67,17 +67,17 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			_fail("Incorrect fill level! Filled %.0f%%" % (fill_amount*100))
 
-func _adjust_difficulty(stage : QTEPanel.Stage) -> void:
+func _adjust_difficulty(stage : Main.Stage) -> void:
 	match stage:
-		QTEPanel.Stage.Childhood:
+		Main.Stage.Childhood:
 			pass
-		QTEPanel.Stage.Adolescence:
+		Main.Stage.Adolescence:
 			pass
-		QTEPanel.Stage.YoungAdult:
+		Main.Stage.YoungAdult:
 			pass
-		QTEPanel.Stage.MiddleAge:
+		Main.Stage.MiddleAge:
 			pass
-		QTEPanel.Stage.Senior:
+		Main.Stage.Senior:
 			pass
 
 func _success() -> void:

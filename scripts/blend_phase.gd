@@ -91,21 +91,21 @@ func _unhandled_input(event: InputEvent) -> void:
 			else:
 				_fail("Too slow!")
 
-func _adjust_difficulty(stage : QTEPanel.Stage) -> void:
+func _adjust_difficulty(stage : Main.Stage) -> void:
 	match stage:
-		QTEPanel.Stage.Childhood:
+		Main.Stage.Childhood:
 			sequenceSize = 4
 			input_time_window = 3.5
-		QTEPanel.Stage.Adolescence:
+		Main.Stage.Adolescence:
 			sequenceSize = 4
 			input_time_window = 3.0
-		QTEPanel.Stage.YoungAdult:
+		Main.Stage.YoungAdult:
 			sequenceSize = 5
 			input_time_window = 2.5
-		QTEPanel.Stage.MiddleAge:
+		Main.Stage.MiddleAge:
 			sequenceSize = 5
 			input_time_window = 1.6
-		QTEPanel.Stage.Senior:
+		Main.Stage.Senior:
 			sequenceSize = 6
 			input_time_window = 1.6
 

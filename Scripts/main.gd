@@ -1,4 +1,8 @@
 extends Control
+class_name Main
+
+enum Stage {Childhood, Adolescence, YoungAdult, MiddleAge, Senior}
+@export var lifeStage : Stage = Stage.Childhood
 
 @onready var blender = $Control/BlenderZone
 @onready var qte_panel: QTEPanel = $QTEPanel
@@ -14,7 +18,7 @@ var phases : Array[PackedScene]= [
 func _ready() -> void:
 	if blender:
 		blender.connect("recipe_complete", Callable(self, "_on_recipe_complete"))
-		var recipe = GameManager.get_childhood_recipe()
+		var recipe = GameManager.get_recipe(lifeStage)
 		blender.set_recipe(recipe)
 	else:
 		push_error("BlenderZone not found in scene tree")
@@ -35,7 +39,7 @@ func _on_recipe_complete() -> void:
 	}
 
 	qte_panel.show()
-	qte_panel.start_qte(phases, qte_context)
+	qte_panel.start_qte(phases, lifeStage, qte_context)
 
 func _on_qte_finished(success: bool, data: Dictionary) -> void:
 	qte_panel.hide()

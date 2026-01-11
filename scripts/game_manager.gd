@@ -28,8 +28,15 @@ func get_childhood_recipe() -> Dictionary:
 func get_adolescence_recipe() -> Dictionary:
 	return {
 		"chocolate": 1,
-		"protein_bar": 1,
-		"energy_drink": 1,
-		"peanut_butter": 1,
-		"soda": 1
+		"choclate": 1,
+		"protein_powder": 1,
 	}
+
+func get_recipe(stage : Main.Stage) -> Dictionary:
+	match stage:
+		Main.Stage.Childhood:
+			return get_childhood_recipe()
+		Main.Stage.Adolescence:
+			return get_adolescence_recipe()
+	
+	return {}

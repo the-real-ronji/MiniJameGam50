@@ -60,33 +60,33 @@ func start(data := {}) -> void:
 	)
 
 # --- Adjust difficulty and green zone bounds by stage ---
-func _adjust_difficulty(stage: QTEPanel.Stage) -> void:
+func _adjust_difficulty(stage: Main.Stage) -> void:
 	match stage:
-		QTEPanel.Stage.Childhood:
+		Main.Stage.Childhood:
 			total_time = 1.5
 			greenZoneStart = 0.4
 			greenZoneEnd = 0.9
 			greenZoneLowerBound = 0.3
 			greenZoneUpperBound = 0.5
-		QTEPanel.Stage.Adolescence:
+		Main.Stage.Adolescence:
 			total_time = 1.2
 			greenZoneStart = 0.45
 			greenZoneEnd = 0.85
 			greenZoneLowerBound = 0.25
 			greenZoneUpperBound = 0.45
-		QTEPanel.Stage.YoungAdult:
+		Main.Stage.YoungAdult:
 			total_time = 1.0
 			greenZoneStart = 0.5
 			greenZoneEnd = 0.85
 			greenZoneLowerBound = 0.2
 			greenZoneUpperBound = 0.4
-		QTEPanel.Stage.MiddleAge:
+		Main.Stage.MiddleAge:
 			total_time = 0.8
 			greenZoneStart = 0.55
 			greenZoneEnd = 0.85
 			greenZoneLowerBound = 0.15
 			greenZoneUpperBound = 0.35
-		QTEPanel.Stage.Senior:
+		Main.Stage.Senior:
 			total_time = 0.7
 			greenZoneStart = 0.6
 			greenZoneEnd = 0.85

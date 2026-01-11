@@ -14,6 +14,10 @@ var drag_texture : Texture2D = preload("res://Sprites/APPLEWhite.png")
 func _ready():
 	original_position = position
 	original_texture = texture
+	original_position = position
+	original_texture = texture
+	var blender = get_parent().get_node_or_null("BlenderZone")
+	print("Found blender:", blender)
 
 func _gui_input(event):
 	if locked:
@@ -31,16 +35,16 @@ func _gui_input(event):
 		position += event.relative
 
 func _check_drop_zone():
-	var blender = get_parent().get_node("BlenderZone")
-	var ingredient_rect = get_global_rect()
-	var blender_rect = Rect2(
-	blender.global_position - blender.sprite_frames.get_frame_texture(blender.animation, blender.frame).get_size() / 2,
-	blender.sprite_frames.get_frame_texture(blender.animation, blender.frame).get_size()
-)
+	var blender = get_parent().get_node_or_null("BlenderZone")
+	if blender == null:
+		print("BlenderZone not found!")
+		return
+
+	var ingredient_rect = Rect2(global_position, size)
+	var blender_rect = blender.get_global_rect()
 
 	if ingredient_rect.intersects(blender_rect):
-		var accepted = blender.accept_ingredient(ingredient_name)
-		if accepted:
+		if blender.accept_ingredient(ingredient_name):
 			position = drop_position - size / 4
 			scale = drop_scale
 			locked = true

@@ -15,14 +15,7 @@ script = ExtResource("1_kg1an")
 [node name="ingredients" type="Node2D" parent="."]
 
 [node name="BlenderZone" parent="ingredients" instance=ExtResource("3_us22l")]
-position = Vector2(343, 205)
-
-[node name="VisualFeedback" type="Label" parent="ingredients/BlenderZone"]
-visible = false
-offset_left = 8.0
-offset_top = 263.0
-offset_right = 212.0
-offset_bottom = 286.0
+position = Vector2(225, 71)
 
 [node name="sugarcubes_ingredient" parent="ingredients" instance=ExtResource("4_tfjjj")]
 offset_left = 55.0
