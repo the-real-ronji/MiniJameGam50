@@ -45,8 +45,9 @@ func _on_qte_finished(success: bool, data: Dictionary) -> void:
 		print("Run data: ", data)
 		successOverlay.show()
 	else:
-		if GameManager.attempt == 5:
+		if GameManager.attempt >= 5:
 			print("Drink failed!")
 			print("Failure data: ", data)
 		else:
 			GameManager.attempt += 1
+			get_tree().reload_current_scene()

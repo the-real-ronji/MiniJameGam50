@@ -24,7 +24,7 @@ func accept_ingredient(ingredientName: String) -> bool:
 	else:
 		showfeedback()
 		GameManager.attempt += 1
-		if GameManager.attempt == 5:
+		if GameManager.attempt >= 5:
 			$"../UIs/GameOver".show()
 		match name:
 			"sugarcubes":
