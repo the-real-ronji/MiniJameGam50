@@ -14,8 +14,6 @@ var drag_texture : Texture2D = preload("res://Sprites/final sprites/APPLEWhite.p
 func _ready():
 	original_position = position
 	original_texture = texture
-	original_position = position
-	original_texture = texture
 	var blender = get_parent().get_node_or_null("BlenderZone")
 	print("Found blender:", blender)
 
