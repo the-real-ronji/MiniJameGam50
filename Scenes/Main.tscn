@@ -23,9 +23,12 @@ grow_vertical = 2
 script = ExtResource("1_bmxlf")
 
 [node name="Control" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="BlenderZone" parent="Control" instance=ExtResource("8_bjd11")]
 position = Vector2(218, 55)
@@ -37,7 +40,7 @@ offset_top = 450.0
 offset_right = 562.0
 offset_bottom = 566.0
 
-[node name="Milk_ingredient" parent="Control" instance=ExtResource("4_mwfav")]
+[node name="milk_ingredient" parent="Control" instance=ExtResource("4_mwfav")]
 layout_mode = 0
 offset_left = 245.0
 offset_top = 419.0
