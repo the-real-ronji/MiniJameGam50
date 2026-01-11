@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh5b6oqkp0mu0"]
+
+[ext_resource type="Texture2D" uid="uid://b37my81f7d3wl" path="res://Sprites/TURMERICCWhite.png" id="1_p12ly"]
+[ext_resource type="Script" uid="uid://pdfkxyt5y3cu" path="res://scripts/tumeric_ingredient.gd" id="2_p12ly"]
+
+[node name="tumeric_ingredient" type="TextureRect"]
+offset_left = 101.0
+offset_top = 410.0
+offset_right = 251.0
+offset_bottom = 560.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("1_p12ly")
+expand_mode = 1
+script = ExtResource("2_p12ly")
