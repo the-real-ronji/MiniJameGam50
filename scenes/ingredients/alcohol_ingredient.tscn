@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://sisao4skciyl"]
+
+[ext_resource type="Texture2D" uid="uid://b2keih25ntqsi" path="res://Sprites/ALCOHOLWhite.png" id="1_4ybyu"]
+[ext_resource type="Script" uid="uid://ivgus2qpnek7" path="res://scripts/alcohol_ingredient.gd" id="2_4ybyu"]
+
+[node name="alcohol_ingredient" type="TextureRect"]
+offset_left = 746.0
+offset_top = 405.0
+offset_right = 896.0
+offset_bottom = 555.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("1_4ybyu")
+expand_mode = 1
+script = ExtResource("2_4ybyu")

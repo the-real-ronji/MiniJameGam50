@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdynh23v31dqn"]
+
+[ext_resource type="Texture2D" uid="uid://s0m8lmyxay3p" path="res://Sprites/COFFEE.png" id="1_60nfy"]
+[ext_resource type="Script" uid="uid://bx6fot651ac1x" path="res://scripts/coffee_ingredient.gd" id="2_60nfy"]
+
+[node name="coffee_ingredient" type="TextureRect"]
+offset_left = 746.0
+offset_top = 405.0
+offset_right = 896.0
+offset_bottom = 555.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("1_60nfy")
+expand_mode = 1
+script = ExtResource("2_60nfy")
