@@ -1,0 +1,143 @@
+[gd_scene load_steps=15 format=3 uid="uid://dre57sa84d56u"]
+
+[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_wlhdi"]
+[ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://scenes/blender_zone.tscn" id="2_ifxk4"]
+[ext_resource type="PackedScene" uid="uid://do6w53ssty7sj" path="res://scenes/ingredients/milk_ingredient.tscn" id="3_kri7e"]
+[ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://scenes/ingredients/apple_ingredient.tscn" id="4_fpo35"]
+[ext_resource type="PackedScene" uid="uid://cdynh23v31dqn" path="res://scenes/ingredients/coffee_ingredient.tscn" id="4_xkbck"]
+[ext_resource type="PackedScene" uid="uid://c2j4i3ywbkmrs" path="res://scenes/ingredients/protein_powder_ingredient.tscn" id="5_xkbck"]
+[ext_resource type="PackedScene" uid="uid://cwk3nfc0re1l6" path="res://scenes/ingredients/honey_ingredient.tscn" id="6_0lj5f"]
+[ext_resource type="PackedScene" uid="uid://by8hlpuyjjlq8" path="res://scenes/ingredients/energyDrink_ingredient.tscn" id="7_0lj5f"]
+[ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://scripts/game_over.gd" id="9_53ipl"]
+[ext_resource type="PackedScene" uid="uid://sisao4skciyl" path="res://scenes/ingredients/alcohol_ingredient.tscn" id="9_ifxk4"]
+[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="10_mymjw"]
+[ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="11_6geb0"]
+[ext_resource type="PackedScene" uid="uid://bw2qrmlgvnegg" path="res://scenes/success_overlay.tscn" id="12_5ygge"]
+[ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://scripts/attempts.gd" id="13_rh6xw"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wlhdi")
+lifeStage = 2
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlenderZone" parent="Control" instance=ExtResource("2_ifxk4")]
+position = Vector2(218, 55)
+
+[node name="milk_ingredient" parent="Control" instance=ExtResource("3_kri7e")]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 396.0
+offset_right = 363.0
+offset_bottom = 546.0
+
+[node name="coffee_ingredient" parent="Control" instance=ExtResource("4_xkbck")]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 265.0
+offset_right = 191.0
+offset_bottom = 415.0
+
+[node name="apple_ingredient" parent="Control" instance=ExtResource("4_fpo35")]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 529.0
+offset_right = 412.0
+offset_bottom = 622.0
+
+[node name="protein_powder_ingredient" parent="Control" instance=ExtResource("5_xkbck")]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 413.0
+offset_right = 181.0
+offset_bottom = 515.0
+
+[node name="energyDrink_ingredient" parent="Control" instance=ExtResource("7_0lj5f")]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 306.0
+offset_right = 300.0
+offset_bottom = 456.0
+
+[node name="honey_ingredient" parent="Control" instance=ExtResource("6_0lj5f")]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 523.0
+offset_right = 226.0
+offset_bottom = 623.0
+
+[node name="alcohol_ingredient" parent="Control" instance=ExtResource("9_ifxk4")]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 476.0
+offset_right = 647.0
+offset_bottom = 626.0
+
+[node name="UIs" type="Node" parent="Control"]
+
+[node name="GameOver" type="CanvasLayer" parent="Control/UIs"]
+visible = false
+script = ExtResource("9_53ipl")
+
+[node name="Panel" type="Panel" parent="Control/UIs/GameOver"]
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.031000001
+offset_left = -95.0
+offset_top = -42.0
+offset_right = 1196.416
+offset_bottom = 665.912
+
+[node name="Label" type="Label" parent="Control/UIs/GameOver"]
+offset_right = 1125.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 50
+text = "You Failed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry" type="Button" parent="Control/UIs/GameOver"]
+offset_left = 439.0
+offset_top = 372.0
+offset_right = 669.0
+offset_bottom = 425.0
+text = "Play Again"
+
+[node name="QTEPanel" parent="." instance=ExtResource("10_mymjw")]
+layout_mode = 1
+offset_left = 642.0
+offset_top = 52.0
+offset_right = -106.0
+offset_bottom = -379.0
+
+[node name="Phases" type="Control" parent="QTEPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("11_6geb0")
+
+[node name="Success" parent="." instance=ExtResource("12_5ygge")]
+
+[node name="attempts" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 23.0
+script = ExtResource("13_rh6xw")
+
+[connection signal="pressed" from="Control/UIs/GameOver/retry" to="Control/UIs/GameOver" method="_on_retry_pressed"]

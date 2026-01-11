@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://by8hlpuyjjlq8"]
 
-[ext_resource type="Texture2D" uid="uid://bact1pyav5csi" path="res://Sprites/ENERGY_DRINKWhite.png" id="1_h8ss3"]
+[ext_resource type="Texture2D" uid="uid://crh00s8irjad0" path="res://Sprites/final sprites/ENERGY_DRINK-export.png" id="1_h8ss3"]
 [ext_resource type="Script" uid="uid://do5p6waohvyxh" path="res://scripts/energy_drink_ingredient.gd" id="2_h8ss3"]
 
 [node name="energyDrink_ingredient" type="TextureRect"]

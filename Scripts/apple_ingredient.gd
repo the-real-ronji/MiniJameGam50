@@ -1,6 +1,6 @@
 extends TextureRect
 
-@export var drop_position: Vector2 = Vector2(430, 230)
+@export var drop_position: Vector2 = Vector2(955,380)
 @export var drop_scale: Vector2 = Vector2(0.5, 0.5)
 
 var dragging := false

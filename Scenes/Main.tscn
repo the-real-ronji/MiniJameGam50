@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://diiwudvk716im"]
+[gd_scene load_steps=14 format=3 uid="uid://diiwudvk716im"]
 
 [ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_bmxlf"]
 [ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://scenes/ingredients/sugarcubes_ingredient.tscn" id="3_qmy6f"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="11_4kpch"]
 [ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="12_grg3l"]
 [ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://scripts/game_over.gd" id="13_frkhe"]
+[ext_resource type="PackedScene" uid="uid://dr3rxny3tc51f" path="res://scenes/tile_map.tscn" id="13_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://bw2qrmlgvnegg" path="res://scenes/success_overlay.tscn" id="14_mwfav"]
 [ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://scripts/attempts.gd" id="15_h1m7h"]
 
@@ -22,6 +23,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bmxlf")
 
+[node name="TileMap" parent="." instance=ExtResource("13_qmy6f")]
+position = Vector2(-249, -42.999996)
+scale = Vector2(6.391721, 6.391721)
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -31,35 +36,36 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BlenderZone" parent="Control" instance=ExtResource("8_bjd11")]
-position = Vector2(218, 55)
+position = Vector2(790, 253)
+scale = Vector2(0.7510268, 0.7510268)
 
 [node name="apple_ingredient" parent="Control" instance=ExtResource("6_cvmbd")]
 layout_mode = 0
-offset_left = 446.0
-offset_top = 450.0
-offset_right = 562.0
-offset_bottom = 566.0
+offset_left = 178.0
+offset_top = 369.0
+offset_right = 252.0
+offset_bottom = 443.0
 
 [node name="milk_ingredient" parent="Control" instance=ExtResource("4_mwfav")]
 layout_mode = 0
-offset_left = 245.0
-offset_top = 419.0
-offset_right = 395.0
-offset_bottom = 569.0
+offset_left = 112.0
+offset_top = 403.0
+offset_right = 204.0
+offset_bottom = 492.0
 
 [node name="ice_ingredient" parent="Control" instance=ExtResource("5_3p2gp")]
 layout_mode = 0
-offset_left = 627.0
-offset_top = 376.0
-offset_right = 777.0
-offset_bottom = 526.0
+offset_left = 120.0
+offset_top = 333.0
+offset_right = 184.0
+offset_bottom = 397.0
 
 [node name="sugarcubes_ingredient" parent="Control" instance=ExtResource("3_qmy6f")]
 layout_mode = 0
-offset_left = 55.0
-offset_top = 393.0
-offset_right = 205.0
-offset_bottom = 543.0
+offset_left = 164.0
+offset_top = 292.0
+offset_right = 235.0
+offset_bottom = 363.0
 texture = ExtResource("4_2w5on")
 
 [node name="UIs" type="Node" parent="Control"]
@@ -94,10 +100,10 @@ text = "Play Again"
 
 [node name="QTEPanel" parent="." instance=ExtResource("11_4kpch")]
 layout_mode = 1
-offset_left = 642.0
-offset_top = 52.0
-offset_right = -106.0
-offset_bottom = -379.0
+offset_left = 366.0
+offset_top = 410.0
+offset_right = -382.0
+offset_bottom = -21.0
 
 [node name="Phases" type="Control" parent="QTEPanel"]
 anchors_preset = 0

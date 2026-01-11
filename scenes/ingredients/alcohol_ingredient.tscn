@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://sisao4skciyl"]
 
-[ext_resource type="Texture2D" uid="uid://b2keih25ntqsi" path="res://Sprites/ALCOHOLWhite.png" id="1_4ybyu"]
+[ext_resource type="Texture2D" uid="uid://dqk8yu1ukh1c0" path="res://Sprites/final sprites/ALCOHOL.png" id="1_4ybyu"]
 [ext_resource type="Script" uid="uid://ivgus2qpnek7" path="res://scripts/alcohol_ingredient.gd" id="2_4ybyu"]
 
 [node name="alcohol_ingredient" type="TextureRect"]

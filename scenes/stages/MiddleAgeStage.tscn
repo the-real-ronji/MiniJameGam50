@@ -1,0 +1,161 @@
+[gd_scene load_steps=18 format=3 uid="uid://c582nf4h7gk7p"]
+
+[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_ss420"]
+[ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://scenes/blender_zone.tscn" id="2_y6kdk"]
+[ext_resource type="PackedScene" uid="uid://cdynh23v31dqn" path="res://scenes/ingredients/coffee_ingredient.tscn" id="4_w0pwl"]
+[ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://scenes/ingredients/apple_ingredient.tscn" id="5_hahhf"]
+[ext_resource type="PackedScene" uid="uid://cltayaoy53hk8" path="res://scenes/ingredients/cucumber_ingredient.tscn" id="6_y6kdk"]
+[ext_resource type="PackedScene" uid="uid://by8hlpuyjjlq8" path="res://scenes/ingredients/energyDrink_ingredient.tscn" id="7_bg7ma"]
+[ext_resource type="PackedScene" uid="uid://cwk3nfc0re1l6" path="res://scenes/ingredients/honey_ingredient.tscn" id="8_6wsuf"]
+[ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://scenes/ingredients/sugarcubes_ingredient.tscn" id="10_w0pwl"]
+[ext_resource type="PackedScene" uid="uid://sisao4skciyl" path="res://scenes/ingredients/alcohol_ingredient.tscn" id="10_xl2yh"]
+[ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://scripts/game_over.gd" id="11_dn0fo"]
+[ext_resource type="Texture2D" uid="uid://cqgvffxxwnmoq" path="res://Sprites/final sprites/SUGAR-export.png" id="11_hahhf"]
+[ext_resource type="PackedScene" uid="uid://dh5b6oqkp0mu0" path="res://scenes/ingredients/tumeric_ingredient.tscn" id="11_w0pwl"]
+[ext_resource type="PackedScene" uid="uid://d3nepd6fb0wfo" path="res://scenes/ingredients/yoghurt_ingredient.tscn" id="12_hahhf"]
+[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="12_qc5q8"]
+[ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="13_to1qs"]
+[ext_resource type="PackedScene" uid="uid://bw2qrmlgvnegg" path="res://scenes/success_overlay.tscn" id="14_2ai1m"]
+[ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://scripts/attempts.gd" id="15_sjn6w"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ss420")
+lifeStage = 3
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlenderZone" parent="Control" instance=ExtResource("2_y6kdk")]
+position = Vector2(218, 55)
+
+[node name="coffee_ingredient" parent="Control" instance=ExtResource("4_w0pwl")]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 265.0
+offset_right = 191.0
+offset_bottom = 415.0
+
+[node name="apple_ingredient" parent="Control" instance=ExtResource("5_hahhf")]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 529.0
+offset_right = 412.0
+offset_bottom = 622.0
+
+[node name="cucumber_ingredient" parent="Control" instance=ExtResource("6_y6kdk")]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 399.0
+offset_right = 452.0
+offset_bottom = 549.0
+
+[node name="energyDrink_ingredient" parent="Control" instance=ExtResource("7_bg7ma")]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 306.0
+offset_right = 300.0
+offset_bottom = 456.0
+
+[node name="honey_ingredient" parent="Control" instance=ExtResource("8_6wsuf")]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 523.0
+offset_right = 226.0
+offset_bottom = 623.0
+
+[node name="tumeric_ingredient" parent="Control" instance=ExtResource("11_w0pwl")]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 174.0
+offset_right = 144.0
+offset_bottom = 324.0
+
+[node name="sugarcubes_ingredient" parent="Control" instance=ExtResource("10_w0pwl")]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 148.0
+offset_right = 296.0
+offset_bottom = 298.0
+texture = ExtResource("11_hahhf")
+
+[node name="yoghurt_ingredient" parent="Control" instance=ExtResource("12_hahhf")]
+layout_mode = 0
+offset_left = 754.0
+offset_top = 468.0
+offset_right = 904.0
+offset_bottom = 618.0
+
+[node name="alcohol_ingredient" parent="Control" instance=ExtResource("10_xl2yh")]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 476.0
+offset_right = 647.0
+offset_bottom = 626.0
+
+[node name="UIs" type="Node" parent="Control"]
+
+[node name="GameOver" type="CanvasLayer" parent="Control/UIs"]
+visible = false
+script = ExtResource("11_dn0fo")
+
+[node name="Panel" type="Panel" parent="Control/UIs/GameOver"]
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.031000001
+offset_left = -95.0
+offset_top = -42.0
+offset_right = 1196.416
+offset_bottom = 665.912
+
+[node name="Label" type="Label" parent="Control/UIs/GameOver"]
+offset_right = 1125.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 50
+text = "You Failed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry" type="Button" parent="Control/UIs/GameOver"]
+offset_left = 439.0
+offset_top = 372.0
+offset_right = 669.0
+offset_bottom = 425.0
+text = "Play Again"
+
+[node name="QTEPanel" parent="." instance=ExtResource("12_qc5q8")]
+layout_mode = 1
+offset_left = 642.0
+offset_top = 52.0
+offset_right = -106.0
+offset_bottom = -379.0
+
+[node name="Phases" type="Control" parent="QTEPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("13_to1qs")
+
+[node name="Success" parent="." instance=ExtResource("14_2ai1m")]
+
+[node name="attempts" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 23.0
+script = ExtResource("15_sjn6w")
+
+[connection signal="pressed" from="Control/UIs/GameOver/retry" to="Control/UIs/GameOver" method="_on_retry_pressed"]
