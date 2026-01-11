@@ -1,6 +1,6 @@
 extends TextureRect
 
-@export var drop_position: Vector2 = Vector2(430, 230)
+@export var drop_position: Vector2 = Vector2(845, 255)
 @export var drop_scale: Vector2 = Vector2(0.5, 0.5)
 
 var dragging := false
@@ -14,6 +14,10 @@ var drag_texture : Texture2D = preload("res://Sprites/final sprites/SUGARWhitet.
 func _ready():
 	original_position = position
 	original_texture = texture
+	original_position = position
+	original_texture = texture
+	var blender = get_parent().get_node_or_null("BlenderZone")
+	print("Found blender:", blender)
 
 func _gui_input(event):
 	if locked:
@@ -31,12 +35,16 @@ func _gui_input(event):
 		position += event.relative
 
 func _check_drop_zone():
-	var blender = get_parent().get_node("BlenderZone")
-	var ingredient_rect = get_global_rect()
+	var blender = get_parent().get_node_or_null("BlenderZone")
+	if blender == null:
+		print("BlenderZone not found!")
+		return
+
+	var ingredient_rect = Rect2(global_position, size)
 	var blender_rect = blender.get_global_rect()
+
 	if ingredient_rect.intersects(blender_rect):
-		var accepted = blender.accept_ingredient(ingredient_name)
-		if accepted:
+		if blender.accept_ingredient(ingredient_name):
 			position = drop_position - size / 4
 			scale = drop_scale
 			locked = true

@@ -48,24 +48,24 @@ offset_bottom = 263.0
 
 [node name="milk_ingredient" parent="Control" instance=ExtResource("4_mwfav")]
 layout_mode = 0
-offset_left = 167.0
-offset_top = 174.0
-offset_right = 267.26965
-offset_bottom = 271.0
+offset_left = 142.0
+offset_top = 168.0
+offset_right = 242.26965
+offset_bottom = 265.0
 
 [node name="ice_ingredient" parent="Control" instance=ExtResource("5_3p2gp")]
 layout_mode = 0
-offset_left = 266.0
-offset_top = 205.0
-offset_right = 330.0
-offset_bottom = 269.0
+offset_left = 230.0
+offset_top = 180.0
+offset_right = 316.0
+offset_bottom = 266.0
 
 [node name="sugarcubes_ingredient" parent="Control" instance=ExtResource("3_qmy6f")]
 layout_mode = 0
-offset_left = 315.0
-offset_top = 173.0
-offset_right = 420.0
-offset_bottom = 278.0
+offset_left = 297.0
+offset_top = 150.0
+offset_right = 424.0
+offset_bottom = 277.0
 texture = ExtResource("4_2w5on")
 
 [node name="UIs" type="Node" parent="Control"]

@@ -20,6 +20,11 @@ config/icon="res://Sprites/icon.svg"
 
 GameManager="*res://scripts/game_manager.gd"
 
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"
+
 [input]
 
 a={

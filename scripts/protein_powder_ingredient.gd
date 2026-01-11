@@ -1,6 +1,6 @@
 extends TextureRect
 
-@export var drop_position: Vector2 = Vector2(430, 230)
+@export var drop_position: Vector2 = Vector2(845, 255)
 @export var drop_scale: Vector2 = Vector2(0.5, 0.5)
 
 var dragging := false
@@ -9,7 +9,7 @@ var original_position : Vector2
 var locked := false
 
 var original_texture : Texture2D
-var drag_texture : Texture2D = preload("res://Sprites/final sprites/ICEWhite.png")
+var drag_texture : Texture2D = preload("res://Sprites/final sprites/PROTEINWhite.png")
 
 func _ready():
 	original_position = position
