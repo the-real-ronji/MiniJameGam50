@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://cvnd3v0v25o0h"]
+
+[ext_resource type="Script" uid="uid://cgqplgw0hhnqj" path="res://Scripts/stage_1.gd" id="1_kg1an"]
+[ext_resource type="PackedScene" uid="uid://diiwudvk716im" path="res://Scenes/Main.tscn" id="2_us22l"]
+[ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://Scenes/blender_zone.tscn" id="3_us22l"]
+[ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://Scenes/ingredients/sugarcubes_ingredient.tscn" id="4_tfjjj"]
+[ext_resource type="Texture2D" uid="uid://cqgvffxxwnmoq" path="res://Sprites/SUGAR-export.png" id="5_g2yki"]
+[ext_resource type="PackedScene" uid="uid://do6w53ssty7sj" path="res://Scenes/ingredients/milk_ingredient.tscn" id="6_knpwr"]
+[ext_resource type="Texture2D" uid="uid://djxqer32a8gcc" path="res://Sprites/MILK-export.png" id="7_rjeum"]
+[ext_resource type="PackedScene" uid="uid://bl6knngwrqtxu" path="res://Scenes/ingredients/ice_ingredient.tscn" id="8_5w8o0"]
+[ext_resource type="Texture2D" uid="uid://i7c1bw156pl6" path="res://Sprites/ICE-export.png" id="9_37gc6"]
+[ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://Scenes/ingredients/apple_ingredient.tscn" id="10_ejxu4"]
+[ext_resource type="Texture2D" uid="uid://cxfxma2a8u6if" path="res://Sprites/APPLE.png" id="11_o04gq"]
+[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://Scenes/qte_panel.tscn" id="12_g2yki"]
+
+[node name="Stage1" type="Node2D"]
+script = ExtResource("1_kg1an")
+
+[node name="Main" parent="." instance=ExtResource("2_us22l")]
+offset_left = -58.0
+offset_top = 33.0
+offset_right = -58.0
+offset_bottom = 33.0
+script = null
+
+[node name="ingredients" type="Node2D" parent="."]
+
+[node name="BlenderZone" parent="ingredients" instance=ExtResource("3_us22l")]
+position = Vector2(480, 282)
+
+[node name="VisualFeedback" type="Label" parent="ingredients/BlenderZone"]
+visible = false
+offset_left = 8.0
+offset_top = 263.0
+offset_right = 212.0
+offset_bottom = 286.0
+
+[node name="sugarcubes_ingredient" parent="ingredients" instance=ExtResource("4_tfjjj")]
+offset_left = 55.0
+offset_top = 393.0
+offset_right = 205.0
+offset_bottom = 543.0
+texture = ExtResource("5_g2yki")
+
+[node name="Milk_ingredient" parent="ingredients" instance=ExtResource("6_knpwr")]
+offset_left = 245.0
+offset_top = 419.0
+offset_right = 395.0
+offset_bottom = 569.0
+texture = ExtResource("7_rjeum")
+
+[node name="ice_ingredient" parent="ingredients" instance=ExtResource("8_5w8o0")]
+offset_left = 627.0
+offset_top = 376.0
+offset_right = 777.0
+offset_bottom = 526.0
+texture = ExtResource("9_37gc6")
+
+[node name="apple_ingredient" parent="ingredients" instance=ExtResource("10_ejxu4")]
+offset_left = 446.0
+offset_top = 420.0
+offset_right = 596.0
+offset_bottom = 570.0
+texture = ExtResource("11_o04gq")
+
+[node name="QTEPanel" parent="." instance=ExtResource("12_g2yki")]
+offset_left = 268.0
+offset_top = -163.5
+offset_right = 268.0
+offset_bottom = -163.5
+
+[node name="Phases" type="Control" parent="QTEPanel"]
+anchors_preset = 0
+offset_left = 425.0
+offset_top = 271.5
+offset_right = 777.0
+offset_bottom = 487.5

@@ -1,5 +1,8 @@
 extends TextureRect
 
+@export var drop_position: Vector2 = Vector2(476, 257)
+@export var drop_scale: Vector2 = Vector2(0.5, 0.5)
+
 var dragging := false
 var ingredient_name := "sugarcubes"
 var original_position : Vector2
@@ -8,18 +11,13 @@ var locked := false
 var original_texture : Texture2D
 var drag_texture : Texture2D = preload("res://Sprites/SUGARWhitet.png")
 
-var base_scale := Vector2.ONE
-var drop_scale := Vector2(0.5, 0.5)
-
 func _ready():
 	original_position = position
 	original_texture = texture
-	base_scale = scale
 
 func _gui_input(event):
 	if locked:
 		return
-
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			dragging = true
@@ -29,7 +27,6 @@ func _gui_input(event):
 			dragging = false
 			texture = original_texture
 			_check_drop_zone()
-
 	if event is InputEventMouseMotion and dragging:
 		position += event.relative
 
@@ -37,16 +34,11 @@ func _check_drop_zone():
 	var blender = get_parent().get_node("BlenderZone")
 	var ingredient_rect = get_global_rect()
 	var blender_rect = blender.get_global_rect()
-
 	if ingredient_rect.intersects(blender_rect):
 		var accepted = blender.accept_ingredient(ingredient_name)
 		if accepted:
-			# shrink when dropped
+			position = drop_position - size / 4
 			scale = drop_scale
-			# center inside blender’s rect
-			var center_pos = blender_rect.position + blender_rect.size * 0.5
-			var half_size = original_texture.get_size() * scale * 0.5
-			global_position = center_pos - half_size
 			locked = true
 		else:
 			return_to_original()
@@ -56,4 +48,4 @@ func _check_drop_zone():
 func return_to_original() -> void:
 	var tween = create_tween()
 	tween.tween_property(self, "position", original_position, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	tween.tween_property(self, "scale", base_scale, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)

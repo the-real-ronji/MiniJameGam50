@@ -1,6 +1,6 @@
 extends Node
 
-@onready var blender: TextureRect = $Control/BlenderZone
+@onready var blender = $Control/BlenderZone
 @onready var qte_panel: QTEPanel = $QTEPanel
 @onready var successOverlay: CanvasLayer = $Success
 
