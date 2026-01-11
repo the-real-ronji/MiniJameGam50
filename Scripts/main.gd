@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 @onready var blender = $Control/BlenderZone
 @onready var qte_panel: QTEPanel = $QTEPanel

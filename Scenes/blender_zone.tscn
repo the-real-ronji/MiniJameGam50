@@ -1,6 +1,6 @@
 [gd_scene load_steps=53 format=3 uid="uid://1s5doyshdaga"]
 
-[ext_resource type="Script" uid="uid://c058lw2eji3cw" path="res://Scripts/blender_zone.gd" id="1_4u1wg"]
+[ext_resource type="Script" uid="uid://c058lw2eji3cw" path="res://scripts/blender_zone.gd" id="1_4u1wg"]
 [ext_resource type="Texture2D" uid="uid://bm72trrvqdiwe" path="res://Sprites/BlenderAnimation.png" id="1_hlle3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u1wg"]

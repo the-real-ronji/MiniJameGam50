@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 
 @export var accepted_ingredients: Array[String] = ["apple", "milk"]
-@onready var prep_phase: Control = $"../../QTEPanel/Phases/PrepPhase"
+@onready var prep_phase: Control = $"../../QTEPanel/Phases"
 
 func accept_ingredient(name: String) -> bool:
 	return name in accepted_ingredients
