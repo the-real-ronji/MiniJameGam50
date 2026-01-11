@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://diiwudvk716im"]
+[gd_scene load_steps=17 format=3 uid="uid://diiwudvk716im"]
 
 [ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://Scripts/main.gd" id="1_bmxlf"]
 [ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://Scenes/blender_zone.tscn" id="1_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://c4j75h03ncjxe" path="res://Sprites/BlenderSimple.png" id="3_erwvk"]
 [ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://Scenes/ingredients/sugarcubes_ingredient.tscn" id="3_qmy6f"]
 [ext_resource type="Texture2D" uid="uid://cqgvffxxwnmoq" path="res://Sprites/SUGAR-export.png" id="4_2w5on"]
 [ext_resource type="PackedScene" uid="uid://do6w53ssty7sj" path="res://Scenes/ingredients/milk_ingredient.tscn" id="4_mwfav"]
@@ -15,8 +16,6 @@
 [ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://Scripts/game_over.gd" id="13_frkhe"]
 [ext_resource type="PackedScene" path="res://scenes/success_overlay.tscn" id="14_mwfav"]
 [ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://Scripts/attempts.gd" id="15_h1m7h"]
-[ext_resource type="Texture2D" uid="uid://dvhgu2n747u68" path="res://Sprites/icon.svg" id="16_2w5on"]
-[ext_resource type="Script" path="res://scripts/sprite_2d.gd" id="16_erwvk"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -38,6 +37,7 @@ offset_left = 286.0
 offset_right = 511.0
 focus_mode = 2
 mouse_filter = 0
+texture = ExtResource("3_erwvk")
 
 [node name="VisualFeedback" type="Label" parent="Control/BlenderZone"]
 visible = false
@@ -131,12 +131,5 @@ layout_mode = 0
 offset_right = 1.0
 offset_bottom = 23.0
 script = ExtResource("15_h1m7h")
-
-[node name="Node" type="Node" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="Node"]
-position = Vector2(90, 86)
-texture = ExtResource("16_2w5on")
-script = ExtResource("16_erwvk")
 
 [connection signal="pressed" from="Control/UIs/GameOver/retry" to="Control/UIs/GameOver" method="_on_retry_pressed"]
