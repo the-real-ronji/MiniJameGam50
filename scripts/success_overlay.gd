@@ -13,6 +13,8 @@ func _on_button_pressed() -> void:
 			get_tree().change_scene_to_file("res://scenes/stages/YoungAdultStage.tscn")
 		"res://scenes/stages/YoungAdultStage.tscn":
 			get_tree().change_scene_to_file("res://scenes/stages/MiddleAgeStage.tscn")
+		"res://scenes/stages/MiddleAgeStage.tscn":
+			get_tree().change_scene_to_file("res://scenes/stages/SeniorStage.tscn")
 		
 		
 	
