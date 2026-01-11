@@ -3,7 +3,7 @@ class_name BlenderZone
 
 signal recipe_complete
 
-@export var blend_animation := "blend"
+@export var blend_animation := "blending"
 
 var recipe: Dictionary = {}
 var collected: Dictionary = {}
@@ -16,7 +16,7 @@ func _ready() -> void:
 	feedback_label.visible = false
 	blender_sprite.stop()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var anim = self.get_child(0)
 	if GameManager.is_blending == true:
 		anim.play("blending")
@@ -34,19 +34,19 @@ func set_recipe(new_recipe: Dictionary) -> void:
 	print("Blender set with recipe:", recipe)
 
 
-func accept_ingredient(name: String) -> bool:
+func accept_ingredient(ingredientName: String) -> bool:
 	# Only allow correct ingredients during childhood
-	if recipe.has(name) and GameManager.stage == "childhood":
-		collected[name] = collected.get(name, 0) + 1
-		print("Ingredient correct:", name)
+	if recipe.has(ingredientName) and GameManager.stage == "childhood":
+		collected[ingredientName] = collected.get(ingredientName, 0) + 1
+		print("Ingredient correct:", ingredientName)
 		_check_recipe()
 		return true
 	else:
-		_handle_wrong_ingredient(name)
+		_handle_wrong_ingredient(ingredientName)
 		return false
 
 
-func _handle_wrong_ingredient(name: String) -> void:
+func _handle_wrong_ingredient(ingredientName: String) -> void:
 	GameManager.attempt += 1
 
 	if GameManager.attempt >= 5:
@@ -54,7 +54,7 @@ func _handle_wrong_ingredient(name: String) -> void:
 		$"../UIs/GameOver".show()
 		return
 
-	match name:
+	match ingredientName:
 		"sugarcubes":
 			show_feedback("Too bitter for a kid’s drink!")
 		"ice":
