@@ -48,7 +48,6 @@ func _handle_wrong_ingredient(name: String) -> void:
 	if GameManager.attempt >= 5:
 		GameManager.attempt = 0
 		$"../UIs/GameOver".show()
-		get_tree().paused = true
 		return
 
 	match name:
