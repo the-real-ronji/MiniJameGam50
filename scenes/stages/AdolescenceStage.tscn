@@ -52,7 +52,7 @@ offset_right = 467.0
 offset_bottom = 639.0
 scale = Vector2(0.8885338, 0.90817285)
 
-[node name="Milk_ingredient" parent="Control" instance=ExtResource("4_yxtw4")]
+[node name="milk_ingredient" parent="Control" instance=ExtResource("4_yxtw4")]
 layout_mode = 0
 offset_left = 460.0
 offset_top = 432.00003
