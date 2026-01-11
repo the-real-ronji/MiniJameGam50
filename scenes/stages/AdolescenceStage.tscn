@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://caeexwox6la24"]
+[gd_scene load_steps=13 format=3 uid="uid://bj2qvkd8b8pop"]
 
 [ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_21m4i"]
 [ext_resource type="PackedScene" uid="uid://1s5doyshdaga" path="res://scenes/blender_zone.tscn" id="2_qp0hf"]
-[ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://scenes/ingredients/sugarcubes_ingredient.tscn" id="3_5bdfn"]
+[ext_resource type="Texture2D" uid="uid://c4j75h03ncjxe" path="res://Sprites/BlenderSimple.png" id="3_7kogq"]
 [ext_resource type="PackedScene" uid="uid://do6w53ssty7sj" path="res://scenes/ingredients/milk_ingredient.tscn" id="4_yxtw4"]
 [ext_resource type="PackedScene" uid="uid://bl6knngwrqtxu" path="res://scenes/ingredients/ice_ingredient.tscn" id="5_bant6"]
 [ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://scenes/ingredients/apple_ingredient.tscn" id="6_xipx0"]
@@ -10,9 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="8_mcfah"]
 [ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="9_5utie"]
 [ext_resource type="PackedScene" uid="uid://bw2qrmlgvnegg" path="res://scenes/success_overlay.tscn" id="10_65d7v"]
+[ext_resource type="PackedScene" uid="uid://dcau4q6if2qeh" path="res://scenes/ingredients/chocolate_ingredient.tscn" id="10_86v5a"]
 [ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://scripts/attempts.gd" id="11_e8h0i"]
-[ext_resource type="Texture2D" uid="uid://dvhgu2n747u68" path="res://icon.svg" id="12_3qmdb"]
-[ext_resource type="Script" uid="uid://b1wpwiloqxlk5" path="res://scripts/sprite_2d.gd" id="13_5bcbn"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -34,6 +33,7 @@ offset_left = 286.0
 offset_right = 511.0
 focus_mode = 2
 mouse_filter = 0
+texture = ExtResource("3_7kogq")
 
 [node name="VisualFeedback" type="Label" parent="Control/BlenderZone"]
 visible = false
@@ -43,33 +43,13 @@ offset_top = 263.0
 offset_right = 212.0
 offset_bottom = 286.0
 
-[node name="sugarcubes_ingredient" parent="Control" instance=ExtResource("3_5bdfn")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 150.0
-offset_bottom = 150.0
-
-[node name="Milk_ingredient" parent="Control" instance=ExtResource("4_yxtw4")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 150.0
-offset_bottom = 150.0
-
-[node name="ice_ingredient" parent="Control" instance=ExtResource("5_bant6")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 150.0
-offset_bottom = 150.0
-
 [node name="apple_ingredient" parent="Control" instance=ExtResource("6_xipx0")]
 layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 150.0
-offset_bottom = 150.0
+offset_left = 397.0
+offset_top = 465.0
+offset_right = 505.0
+offset_bottom = 574.0
+scale = Vector2(0.8885338, 0.90817285)
 
 [node name="UIs" type="Node" parent="Control"]
 
@@ -124,11 +104,28 @@ offset_right = 1.0
 offset_bottom = 23.0
 script = ExtResource("11_e8h0i")
 
-[node name="Node" type="Node" parent="."]
+[node name="chocolate_ingredient" parent="." instance=ExtResource("10_86v5a")]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 437.0
+offset_right = 431.0
+offset_bottom = 615.0
+scale = Vector2(0.8885338, 0.90817285)
 
-[node name="Sprite2D" type="Sprite2D" parent="Node"]
-position = Vector2(90, 86)
-texture = ExtResource("12_3qmdb")
-script = ExtResource("13_5bcbn")
+[node name="Milk_ingredient" parent="." instance=ExtResource("4_yxtw4")]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 432.0
+offset_right = 685.0
+offset_bottom = 615.0
+scale = Vector2(0.8885338, 0.90817285)
+
+[node name="ice_ingredient" parent="." instance=ExtResource("5_bant6")]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 465.0
+offset_right = 828.0
+offset_bottom = 615.0
+scale = Vector2(0.8885338, 0.90817285)
 
 [connection signal="pressed" from="Control/UIs/GameOver/retry" to="Control/UIs/GameOver" method="_on_retry_pressed"]

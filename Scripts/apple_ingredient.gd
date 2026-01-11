@@ -1,7 +1,7 @@
 extends TextureRect
 
 var dragging := false
-var ingredient_name := "apple"
+var ingredient_name := "honey"
 var original_position : Vector2
 var locked := false
 
