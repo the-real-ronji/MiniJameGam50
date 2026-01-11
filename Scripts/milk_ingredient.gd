@@ -5,8 +5,12 @@ var ingredient_name := "milk"
 var original_position : Vector2
 var locked := false
 
+var original_texture : Texture2D
+var drag_texture : Texture2D = preload("res://Sprites/MILKWhite.png")
+
 func _ready():
 	original_position = position
+	original_texture = texture
 
 func _gui_input(event):
 	if locked:
@@ -15,9 +19,11 @@ func _gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			dragging = true
+			texture = drag_texture
 			grab_focus()
 		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			dragging = false
+			texture = original_texture
 			_check_drop_zone()
 
 	if event is InputEventMouseMotion and dragging:
@@ -34,6 +40,10 @@ func _check_drop_zone():
 			position = blender.position + Vector2(20, 20)
 			locked = true
 		else:
-			position = original_position
+			return_to_original()
 	else:
-		position = original_position
+		return_to_original()
+
+func return_to_original() -> void:
+	var tween = create_tween()
+	tween.tween_property(self, "position", original_position, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
