@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwk3nfc0re1l6"]
+
+[ext_resource type="Texture2D" uid="uid://cnsvhjpiircru" path="res://Sprites/HONEY.png" id="1_m475h"]
+[ext_resource type="Script" uid="uid://gwy6o0at33rv" path="res://scripts/apple_ingredient.gd" id="2_thnsa"]
+
+[node name="honey_ingredient" type="TextureRect"]
+offset_left = 746.0
+offset_top = 405.0
+offset_right = 896.0
+offset_bottom = 555.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("1_m475h")
+expand_mode = 1
+script = ExtResource("2_thnsa")

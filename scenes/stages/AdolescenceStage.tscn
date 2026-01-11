@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="9_5utie"]
 [ext_resource type="PackedScene" uid="uid://bw2qrmlgvnegg" path="res://scenes/success_overlay.tscn" id="10_65d7v"]
 [ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://scripts/attempts.gd" id="11_e8h0i"]
-[ext_resource type="Texture2D" uid="uid://dvhgu2n747u68" path="res://Sprites/icon.svg" id="12_3qmdb"]
+[ext_resource type="Texture2D" uid="uid://dvhgu2n747u68" path="res://icon.svg" id="12_3qmdb"]
 [ext_resource type="Script" uid="uid://b1wpwiloqxlk5" path="res://scripts/sprite_2d.gd" id="13_5bcbn"]
 
 [node name="Main" type="Control"]
@@ -45,15 +45,31 @@ offset_bottom = 286.0
 
 [node name="sugarcubes_ingredient" parent="Control" instance=ExtResource("3_5bdfn")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 150.0
+offset_bottom = 150.0
 
 [node name="Milk_ingredient" parent="Control" instance=ExtResource("4_yxtw4")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 150.0
+offset_bottom = 150.0
 
 [node name="ice_ingredient" parent="Control" instance=ExtResource("5_bant6")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 150.0
+offset_bottom = 150.0
 
 [node name="apple_ingredient" parent="Control" instance=ExtResource("6_xipx0")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 150.0
+offset_bottom = 150.0
 
 [node name="UIs" type="Node" parent="Control"]
 

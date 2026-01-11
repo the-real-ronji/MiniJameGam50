@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://do6w53ssty7sj"]
 
-[ext_resource type="Texture2D" uid="uid://dj4rktcn3e7dk" path="res://Sprites/temp sprites prototype/images.jpg" id="1_kijiy"]
+[ext_resource type="Texture2D" uid="uid://djxqer32a8gcc" path="res://Sprites/MILK-export.png" id="1_e4kb6"]
 [ext_resource type="Script" uid="uid://b5c4jyefuyu5a" path="res://scripts/milk_ingredient.gd" id="2_w8ha3"]
 
 [node name="Milk_ingredient" type="TextureRect"]
@@ -10,6 +10,6 @@ offset_right = 251.0
 offset_bottom = 560.0
 focus_mode = 2
 mouse_filter = 0
-texture = ExtResource("1_kijiy")
+texture = ExtResource("1_e4kb6")
 expand_mode = 1
 script = ExtResource("2_w8ha3")

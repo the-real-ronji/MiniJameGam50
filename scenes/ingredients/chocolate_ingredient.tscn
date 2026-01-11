@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcau4q6if2qeh"]
+
+[ext_resource type="Texture2D" uid="uid://dv658b8tgtgql" path="res://Sprites/CHOCOLATE-export.png" id="1_vxr1j"]
+[ext_resource type="Script" uid="uid://beki0oeire2kb" path="res://scripts/chocolate_ingredient.gd" id="2_vxr1j"]
+
+[node name="chocolate_ingredient" type="TextureRect"]
+offset_left = 620.0
+offset_top = 297.0
+offset_right = 896.0
+offset_bottom = 555.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("1_vxr1j")
+expand_mode = 1
+script = ExtResource("2_vxr1j")

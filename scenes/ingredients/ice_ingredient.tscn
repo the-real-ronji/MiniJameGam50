@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bl6knngwrqtxu"]
 
-[ext_resource type="Texture2D" uid="uid://dyytlisdexmq7" path="res://Sprites/temp sprites prototype/ice.jpg" id="1_nj1mk"]
+[ext_resource type="Texture2D" uid="uid://i7c1bw156pl6" path="res://Sprites/ICE-export.png" id="1_52546"]
 [ext_resource type="Script" uid="uid://d1ksfurx1ruci" path="res://scripts/ice_ingredient.gd" id="2_345dv"]
 
 [node name="ice_ingredient" type="TextureRect"]
@@ -10,6 +10,6 @@ offset_right = 467.0
 offset_bottom = 558.0
 focus_mode = 2
 mouse_filter = 0
-texture = ExtResource("1_nj1mk")
+texture = ExtResource("1_52546")
 expand_mode = 1
 script = ExtResource("2_345dv")
