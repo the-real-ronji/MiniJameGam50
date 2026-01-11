@@ -24,8 +24,8 @@ grow_vertical = 2
 script = ExtResource("1_bmxlf")
 
 [node name="TileMap" parent="." instance=ExtResource("13_qmy6f")]
-position = Vector2(-249, -42.999996)
-scale = Vector2(6.391721, 6.391721)
+position = Vector2(0, -8)
+scale = Vector2(4.500433, 4.500433)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -36,36 +36,36 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BlenderZone" parent="Control" instance=ExtResource("8_bjd11")]
-position = Vector2(790, 253)
+position = Vector2(683, 134)
 scale = Vector2(0.7510268, 0.7510268)
 
 [node name="apple_ingredient" parent="Control" instance=ExtResource("6_cvmbd")]
 layout_mode = 0
-offset_left = 178.0
-offset_top = 369.0
-offset_right = 252.0
-offset_bottom = 443.0
+offset_left = 418.0
+offset_top = 194.0
+offset_right = 487.0
+offset_bottom = 263.0
 
 [node name="milk_ingredient" parent="Control" instance=ExtResource("4_mwfav")]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 403.0
-offset_right = 204.0
-offset_bottom = 492.0
+offset_left = 167.0
+offset_top = 174.0
+offset_right = 267.26965
+offset_bottom = 271.0
 
 [node name="ice_ingredient" parent="Control" instance=ExtResource("5_3p2gp")]
 layout_mode = 0
-offset_left = 120.0
-offset_top = 333.0
-offset_right = 184.0
-offset_bottom = 397.0
+offset_left = 266.0
+offset_top = 205.0
+offset_right = 330.0
+offset_bottom = 269.0
 
 [node name="sugarcubes_ingredient" parent="Control" instance=ExtResource("3_qmy6f")]
 layout_mode = 0
-offset_left = 164.0
-offset_top = 292.0
-offset_right = 235.0
-offset_bottom = 363.0
+offset_left = 315.0
+offset_top = 173.0
+offset_right = 420.0
+offset_bottom = 278.0
 texture = ExtResource("4_2w5on")
 
 [node name="UIs" type="Node" parent="Control"]

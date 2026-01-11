@@ -1,6 +1,6 @@
 extends TextureRect
 
-@export var drop_position: Vector2 = Vector2(955,380)
+@export var drop_position: Vector2 = Vector2(845, 255)
 @export var drop_scale: Vector2 = Vector2(0.5, 0.5)
 
 var dragging := false
@@ -12,6 +12,8 @@ var original_texture : Texture2D
 var drag_texture : Texture2D = preload("res://Sprites/final sprites/APPLEWhite.png")
 
 func _ready():
+	original_position = position
+	original_texture = texture
 	original_position = position
 	original_texture = texture
 	var blender = get_parent().get_node_or_null("BlenderZone")
