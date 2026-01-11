@@ -1,17 +1,17 @@
 [gd_scene load_steps=64 format=3 uid="uid://diiwudvk716im"]
 
-[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://Scripts/main.gd" id="1_bmxlf"]
+[ext_resource type="Script" uid="uid://c44fc4cl835iq" path="res://scripts/main.gd" id="1_bmxlf"]
 [ext_resource type="Texture2D" uid="uid://bm72trrvqdiwe" path="res://Sprites/final sprites/BlenderAnimation.png" id="2_frkhe"]
-[ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://Scenes/ingredients/sugarcubes_ingredient.tscn" id="3_qmy6f"]
+[ext_resource type="PackedScene" uid="uid://bb3jalhnc5k1d" path="res://scenes/ingredients/sugarcubes_ingredient.tscn" id="3_qmy6f"]
 [ext_resource type="Texture2D" uid="uid://cqgvffxxwnmoq" path="res://Sprites/final sprites/SUGAR-export.png" id="4_2w5on"]
-[ext_resource type="PackedScene" uid="uid://do6w53ssty7sj" path="res://Scenes/ingredients/milk_ingredient.tscn" id="4_mwfav"]
-[ext_resource type="PackedScene" uid="uid://bl6knngwrqtxu" path="res://Scenes/ingredients/ice_ingredient.tscn" id="5_3p2gp"]
-[ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://Scenes/ingredients/apple_ingredient.tscn" id="6_cvmbd"]
-[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://Scenes/qte_panel.tscn" id="11_4kpch"]
-[ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://Scripts/game_manager.gd" id="12_grg3l"]
-[ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://Scripts/game_over.gd" id="13_frkhe"]
-[ext_resource type="PackedScene" path="res://scenes/success_overlay.tscn" id="14_mwfav"]
-[ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://Scripts/attempts.gd" id="15_h1m7h"]
+[ext_resource type="PackedScene" uid="uid://do6w53ssty7sj" path="res://scenes/ingredients/milk_ingredient.tscn" id="4_mwfav"]
+[ext_resource type="PackedScene" uid="uid://bl6knngwrqtxu" path="res://scenes/ingredients/ice_ingredient.tscn" id="5_3p2gp"]
+[ext_resource type="PackedScene" uid="uid://bo51kgrcfg5yj" path="res://scenes/ingredients/apple_ingredient.tscn" id="6_cvmbd"]
+[ext_resource type="PackedScene" uid="uid://dlmq0gebvl3g3" path="res://scenes/qte_panel.tscn" id="11_4kpch"]
+[ext_resource type="Script" uid="uid://d3b850lapu40m" path="res://scripts/game_manager.gd" id="12_grg3l"]
+[ext_resource type="Script" uid="uid://df07jp25ofj4c" path="res://scripts/game_over.gd" id="13_frkhe"]
+[ext_resource type="PackedScene" uid="uid://bw2qrmlgvnegg" path="res://scenes/success_overlay.tscn" id="14_mwfav"]
+[ext_resource type="Script" uid="uid://4wwqqn5gisgl" path="res://scripts/attempts.gd" id="15_h1m7h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1p5hy"]
 atlas = ExtResource("2_frkhe")
@@ -371,7 +371,7 @@ animations = [{
 
 [sub_resource type="GDScript" id="GDScript_grg3l"]
 script/source = "extends AnimatedSprite2D
-class_name BlenderZone
+
 
 signal recipe_complete
 
@@ -504,9 +504,9 @@ offset_bottom = 1011.0
 [node name="apple_ingredient" parent="Control" instance=ExtResource("6_cvmbd")]
 layout_mode = 0
 offset_left = 446.0
-offset_top = 420.0
-offset_right = 596.0
-offset_bottom = 570.0
+offset_top = 450.0
+offset_right = 562.0
+offset_bottom = 566.0
 
 [node name="Milk_ingredient" parent="Control" instance=ExtResource("4_mwfav")]
 layout_mode = 0

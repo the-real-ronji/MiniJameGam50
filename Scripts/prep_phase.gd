@@ -47,10 +47,6 @@ func start(data := {}) -> void:
 	min_fraction = randf_range(greenZoneStart, greenZoneEnd - window_size)
 	max_fraction = min_fraction + window_size
 	
-	var stage = data.get("lifeStage", null)
-	if stage != null:
-		_adjust_difficulty(stage)
-
 	_update_green_zone()
 	set_process(true)
 	set_process_unhandled_input(true)
