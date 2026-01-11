@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cltayaoy53hk8"]
+
+[ext_resource type="Texture2D" uid="uid://bn4n5o6elggl5" path="res://Sprites/CUMCUMBER-export.png" id="1_1oifx"]
+[ext_resource type="Script" uid="uid://dlr7lsjjhfh7i" path="res://scripts/cucumber_ingredient.gd" id="2_1oifx"]
+
+[node name="cucumber_ingredient" type="TextureRect"]
+offset_left = 746.0
+offset_top = 405.0
+offset_right = 896.0
+offset_bottom = 555.0
+focus_mode = 2
+mouse_filter = 0
+texture = ExtResource("1_1oifx")
+expand_mode = 1
+script = ExtResource("2_1oifx")

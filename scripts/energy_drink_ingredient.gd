@@ -1,12 +1,12 @@
 extends TextureRect
 
 var dragging := false
-var ingredient_name := "apple"
+var ingredient_name := "energy_drink"
 var original_position : Vector2
 var locked := false
 
 var original_texture : Texture2D
-var drag_texture : Texture2D = preload("res://Sprites/APPLEWhite.png")
+var drag_texture : Texture2D = preload("res://Sprites/ENERGY_DRINKWhite.png")
 
 func _ready():
 	original_position = position
