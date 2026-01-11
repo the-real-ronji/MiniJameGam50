@@ -366,7 +366,7 @@ script = ExtResource("1_4u1wg")
 position = Vector2(210.00002, 199)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_vjepe")
-animation = &"stanby"
+animation = &"blending"
 autoplay = "stanby"
 
 [node name="VisualFeedback" type="Label" parent="."]
