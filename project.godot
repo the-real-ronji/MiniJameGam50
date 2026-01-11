@@ -14,6 +14,7 @@ config/name="MiniJameGam#50"
 run/main_scene="uid://cvnd3v0v25o0h"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
+<<<<<<<HEADrun/main_scene="uid://cvnd3v0v25o0h"
 
 [autoload]
 

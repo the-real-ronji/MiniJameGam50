@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s74qeyphdgc7"
-path="res://.godot/imported/SUGARWhitet.png-1e02b8a100e56b48670ecfffd35656f9.ctex"
+uid="uid://b37my81f7d3wl"
+path="res://.godot/imported/TURMERICCWhite.png-9766fcd36c3f0f39f1947d87b55645dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scripts/SUGARWhitet.png"
-dest_files=["res://.godot/imported/SUGARWhitet.png-1e02b8a100e56b48670ecfffd35656f9.ctex"]
+source_file="res://Sprites/TURMERICCWhite.png"
+dest_files=["res://.godot/imported/TURMERICCWhite.png-9766fcd36c3f0f39f1947d87b55645dd.ctex"]
 
 [params]
 

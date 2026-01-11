@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bo51kgrcfg5yj"]
 
-[ext_resource type="Texture2D" uid="uid://bgj25b6rwvdjp" path="res://Sprites/temp sprites prototype/apple.jpg" id="1_btg53"]
+[ext_resource type="Texture2D" uid="uid://cxfxma2a8u6if" path="res://Sprites/APPLE.png" id="1_tq3fy"]
 [ext_resource type="Script" uid="uid://gwy6o0at33rv" path="res://scripts/apple_ingredient.gd" id="2_ophq7"]
 
 [node name="apple_ingredient" type="TextureRect"]
@@ -10,6 +10,6 @@ offset_right = 896.0
 offset_bottom = 555.0
 focus_mode = 2
 mouse_filter = 0
-texture = ExtResource("1_btg53")
+texture = ExtResource("1_tq3fy")
 expand_mode = 1
 script = ExtResource("2_ophq7")
