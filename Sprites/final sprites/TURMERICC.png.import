@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv658b8tgtgql"
-path="res://.godot/imported/CHOCOLATE-export.png-4a0d1f3322d98da6dc53fefdf0553afb.ctex"
+uid="uid://cc2206ixyxx62"
+path="res://.godot/imported/TURMERICC.png-66f5d57cf6fa87291547fbde144b0cc5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/CHOCOLATE-export.png"
-dest_files=["res://.godot/imported/CHOCOLATE-export.png-4a0d1f3322d98da6dc53fefdf0553afb.ctex"]
+source_file="res://Sprites/final sprites/TURMERICC.png"
+dest_files=["res://.godot/imported/TURMERICC.png-66f5d57cf6fa87291547fbde144b0cc5.ctex"]
 
 [params]
 

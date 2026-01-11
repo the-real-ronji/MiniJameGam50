@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2206ixyxx62"
-path="res://.godot/imported/TURMERICC.png-b811a6248f887d085724d301cf4e2915.ctex"
+uid="uid://cnsvhjpiircru"
+path="res://.godot/imported/HONEY.png-b4d2a6ed102b9b16386ee61aa33d0cd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TURMERICC.png"
-dest_files=["res://.godot/imported/TURMERICC.png-b811a6248f887d085724d301cf4e2915.ctex"]
+source_file="res://Sprites/final sprites/HONEY.png"
+dest_files=["res://.godot/imported/HONEY.png-b4d2a6ed102b9b16386ee61aa33d0cd7.ctex"]
 
 [params]
 

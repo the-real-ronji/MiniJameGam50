@@ -9,7 +9,7 @@ var original_position : Vector2
 var locked := false
 
 var original_texture : Texture2D
-var drag_texture : Texture2D = preload("res://Sprites/ICEWhite.png")
+var drag_texture : Texture2D = preload("res://Sprites/final sprites/ICEWhite.png")
 
 func _ready():
 	original_position = position

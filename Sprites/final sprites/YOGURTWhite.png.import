@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crh00s8irjad0"
-path="res://.godot/imported/ENERGY_DRINK-export.png-3dbe506c65c42a7f057a32baea2053a2.ctex"
+uid="uid://dx07c36gx1v1w"
+path="res://.godot/imported/YOGURTWhite.png-8d86090598f9aaeb3d2201bc7f1715de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ENERGY_DRINK-export.png"
-dest_files=["res://.godot/imported/ENERGY_DRINK-export.png-3dbe506c65c42a7f057a32baea2053a2.ctex"]
+source_file="res://Sprites/final sprites/YOGURTWhite.png"
+dest_files=["res://.godot/imported/YOGURTWhite.png-8d86090598f9aaeb3d2201bc7f1715de.ctex"]
 
 [params]
 

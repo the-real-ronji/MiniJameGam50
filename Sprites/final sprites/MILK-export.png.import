@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b37my81f7d3wl"
-path="res://.godot/imported/TURMERICCWhite.png-9766fcd36c3f0f39f1947d87b55645dd.ctex"
+uid="uid://djxqer32a8gcc"
+path="res://.godot/imported/MILK-export.png-5854b2ed08156f340f8a75242798b8c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TURMERICCWhite.png"
-dest_files=["res://.godot/imported/TURMERICCWhite.png-9766fcd36c3f0f39f1947d87b55645dd.ctex"]
+source_file="res://Sprites/final sprites/MILK-export.png"
+dest_files=["res://.godot/imported/MILK-export.png-5854b2ed08156f340f8a75242798b8c7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7tmbbljiulqt"
-path="res://.godot/imported/YOGURT-export.png-8b3d21212983aa015bc0feddc5fde355.ctex"
+uid="uid://dbiwsd8is732m"
+path="res://.godot/imported/MILKWhite.png-477af70cffa0bf5c28f96ad660113024.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/YOGURT-export.png"
-dest_files=["res://.godot/imported/YOGURT-export.png-8b3d21212983aa015bc0feddc5fde355.ctex"]
+source_file="res://Sprites/final sprites/MILKWhite.png"
+dest_files=["res://.godot/imported/MILKWhite.png-477af70cffa0bf5c28f96ad660113024.ctex"]
 
 [params]
 

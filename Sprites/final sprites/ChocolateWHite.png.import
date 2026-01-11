@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqk8yu1ukh1c0"
-path="res://.godot/imported/ALCOHOL.png-3dae459f481bcb4802aa9e3bb8c72520.ctex"
+uid="uid://b844nm0usu8eq"
+path="res://.godot/imported/ChocolateWHite.png-de10598d2a798362c1f46553d25093ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ALCOHOL.png"
-dest_files=["res://.godot/imported/ALCOHOL.png-3dae459f481bcb4802aa9e3bb8c72520.ctex"]
+source_file="res://Sprites/final sprites/ChocolateWHite.png"
+dest_files=["res://.godot/imported/ChocolateWHite.png-de10598d2a798362c1f46553d25093ad.ctex"]
 
 [params]
 

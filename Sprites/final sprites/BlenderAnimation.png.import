@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx07c36gx1v1w"
-path="res://.godot/imported/YOGURTWhite.png-e9a4a3abb9091ea2ad8af1cfb6962752.ctex"
+uid="uid://bm72trrvqdiwe"
+path="res://.godot/imported/BlenderAnimation.png-345c41b75704e995d768f05b338d53a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/YOGURTWhite.png"
-dest_files=["res://.godot/imported/YOGURTWhite.png-e9a4a3abb9091ea2ad8af1cfb6962752.ctex"]
+source_file="res://Sprites/final sprites/BlenderAnimation.png"
+dest_files=["res://.godot/imported/BlenderAnimation.png-345c41b75704e995d768f05b338d53a6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daoqj2rf614ox"
-path="res://.godot/imported/ICEWhite.png-a807102564600895145138eabf4d5475.ctex"
+uid="uid://bn4n5o6elggl5"
+path="res://.godot/imported/CUMCUMBER-export.png-928de70e1a2e4e3cf42329f8c2106082.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ICEWhite.png"
-dest_files=["res://.godot/imported/ICEWhite.png-a807102564600895145138eabf4d5475.ctex"]
+source_file="res://Sprites/final sprites/CUMCUMBER-export.png"
+dest_files=["res://.godot/imported/CUMCUMBER-export.png-928de70e1a2e4e3cf42329f8c2106082.ctex"]
 
 [params]
 

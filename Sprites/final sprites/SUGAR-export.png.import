@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2keih25ntqsi"
-path="res://.godot/imported/ALCOHOLWhite.png-eebca552a76880936042c165a4193ecf.ctex"
+uid="uid://cqgvffxxwnmoq"
+path="res://.godot/imported/SUGAR-export.png-9dcc955cee1b30f55b8bf46a3fddda6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ALCOHOLWhite.png"
-dest_files=["res://.godot/imported/ALCOHOLWhite.png-eebca552a76880936042c165a4193ecf.ctex"]
+source_file="res://Sprites/final sprites/SUGAR-export.png"
+dest_files=["res://.godot/imported/SUGAR-export.png-9dcc955cee1b30f55b8bf46a3fddda6b.ctex"]
 
 [params]
 

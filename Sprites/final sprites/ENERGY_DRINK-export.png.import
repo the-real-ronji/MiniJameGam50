@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn4n5o6elggl5"
-path="res://.godot/imported/CUMCUMBER-export.png-de95868e82bdf2aa80009275e42c5bb7.ctex"
+uid="uid://crh00s8irjad0"
+path="res://.godot/imported/ENERGY_DRINK-export.png-c1cb5f176962e3bcf7addf5e23db9707.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/CUMCUMBER-export.png"
-dest_files=["res://.godot/imported/CUMCUMBER-export.png-de95868e82bdf2aa80009275e42c5bb7.ctex"]
+source_file="res://Sprites/final sprites/ENERGY_DRINK-export.png"
+dest_files=["res://.godot/imported/ENERGY_DRINK-export.png-c1cb5f176962e3bcf7addf5e23db9707.ctex"]
 
 [params]
 

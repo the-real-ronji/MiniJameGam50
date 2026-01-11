@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbiwsd8is732m"
-path="res://.godot/imported/MILKWhite.png-a278de5465b606d420e4d603e0bd9451.ctex"
+uid="uid://bact1pyav5csi"
+path="res://.godot/imported/ENERGY_DRINKWhite.png-68965a19168dc9a5e5d2f453b677e884.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/MILKWhite.png"
-dest_files=["res://.godot/imported/MILKWhite.png-a278de5465b606d420e4d603e0bd9451.ctex"]
+source_file="res://Sprites/final sprites/ENERGY_DRINKWhite.png"
+dest_files=["res://.godot/imported/ENERGY_DRINKWhite.png-68965a19168dc9a5e5d2f453b677e884.ctex"]
 
 [params]
 

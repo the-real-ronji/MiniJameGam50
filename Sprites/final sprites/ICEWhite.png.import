@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i7c1bw156pl6"
-path="res://.godot/imported/ICE-export.png-db297ef5dbfacb8be000f4af0e6a8ae9.ctex"
+uid="uid://daoqj2rf614ox"
+path="res://.godot/imported/ICEWhite.png-3a20deb59769b519287637d7d1a89d24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ICE-export.png"
-dest_files=["res://.godot/imported/ICE-export.png-db297ef5dbfacb8be000f4af0e6a8ae9.ctex"]
+source_file="res://Sprites/final sprites/ICEWhite.png"
+dest_files=["res://.godot/imported/ICEWhite.png-3a20deb59769b519287637d7d1a89d24.ctex"]
 
 [params]
 

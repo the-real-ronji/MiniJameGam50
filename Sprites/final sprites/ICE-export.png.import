@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm72trrvqdiwe"
-path="res://.godot/imported/BlenderAnimation.png-034d4ff81141149bbe5567fdb14ec723.ctex"
+uid="uid://i7c1bw156pl6"
+path="res://.godot/imported/ICE-export.png-a85dfee4c134908d91f9d79065572374.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/BlenderAnimation.png"
-dest_files=["res://.godot/imported/BlenderAnimation.png-034d4ff81141149bbe5567fdb14ec723.ctex"]
+source_file="res://Sprites/final sprites/ICE-export.png"
+dest_files=["res://.godot/imported/ICE-export.png-a85dfee4c134908d91f9d79065572374.ctex"]
 
 [params]
 

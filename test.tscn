@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dijxh66eub6hi"]
+[gd_scene load_steps=2 format=3 uid="uid://dijxh66eub6hi"]
 
-[ext_resource type="Script" path="res://Scenes/area_2d_2.gd" id="1_8uh7m"]
-[ext_resource type="Texture2D" path="res://Sprites/APPLE.png" id="2_6uqi0"]
+[ext_resource type="Texture2D" uid="uid://cxfxma2a8u6if" path="res://Sprites/final sprites/APPLE.png" id="2_6uqi0"]
 
 [node name="Area2D2" type="Area2D"]
-script = ExtResource("1_8uh7m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_6uqi0")
